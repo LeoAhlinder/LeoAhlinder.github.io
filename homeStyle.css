@@ -1,0 +1,9 @@
+.nav-link{
+    background-color: transparent !important;
+    margin: 0 5px;
+    border: 5px;
+}
+
+.nav-link:hover{
+    color: white !important;
+}
