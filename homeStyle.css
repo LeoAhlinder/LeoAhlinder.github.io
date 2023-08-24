@@ -9,11 +9,33 @@
 }
 
 .container-sm{
-    background-color: red;
+    background-color: transparent;
     margin-top: 5%;   
+    height: 70vh;
+    width: 40vw !important;
+    position: absolute;
+    left: 3%;
 }
 
-.ThemeButton{
-    right: 1%;
+#lightnovelProject{
+    background-color: transparent;
+    margin-top: 2%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    width: 20vw;
+}
+
+#pincodeProject{
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    margin-top: 3%;
+
+}
+
+.selected{
+    background-color: blue !important;
+    margin-left: 50%;
+    transition: 0.5s ease-in-out;
+    width: 13vw !important;
 }
 
