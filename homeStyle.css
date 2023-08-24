@@ -7,3 +7,13 @@
 .nav-link:hover{
     color: white !important;
 }
+
+.container-sm{
+    background-color: red;
+    margin-top: 5%;   
+}
+
+.ThemeButton{
+    right: 1%;
+}
+
