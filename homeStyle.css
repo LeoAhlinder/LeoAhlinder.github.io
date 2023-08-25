@@ -32,9 +32,11 @@
 }
 
 .selected{
-    margin-left: 50%;
+    margin-left: 140%;
+    z-index: 1000px !important;
     transition: 0.5s ease-in-out;
-    color: black;
+    color: red;
+    top: 20px;
 }
 
 #Name{
@@ -43,4 +45,27 @@
 }
 #Name:hover{
     color: black;
+}
+
+#projectText{
+    background-color: gray;
+    position: absolute;
+    margin-left:120%;
+    top: 0;
+}
+
+.projectDesc{
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+#projectName{
+    transition: 5s ease-in-out;
+    color: red;
+}
+
+.projectButton{
+    border: none;
+    background-color: transparent;
+    font-size: 250%;
 }
