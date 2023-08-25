@@ -7,7 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Leos Portfolio</title>
 </head>
 
 
@@ -25,7 +27,7 @@
               <button class="nav-link" aria-current="page">About Me</button>
               <button class="nav-link" >Projects</button>
               <button class="nav-link" >Contant Me</button>
-              <button class="nav-link" onclick="window.open('https://github.com/xxudon')">Github</button>
+              <button class="nav-link" onclick="window.open('https://github.com/LeoAhlinder')">My Github</button>
             </div>
           </div>
         </div>
@@ -34,15 +36,21 @@
       <div class="containerL" id="projectNameContainer">
         <button class="projectButton" onclick="selectedProject(0)">Projects</button>
         <button class="d-block projectButton" id="lightnovelProject" onclick="selectedProject(lightnovelProject)">Light Novels Online</button>
-        <button class="d-block projectButton" id="pincodeProject" onclick="selectedProject(pincodeProject)">Employee</button>
+        <button class="d-block projectButton" id="pincodeProject" onclick="selectedProject(pincodeProject)">Tracking Employee</button>
       </div>
       <div class="containerL" id="gradientContainer">
         
       </div>
       <div class="containerL">
         <p id="projectName"></p>
+
+        <i class="fa fa-github githubIcon" onclick="" style="font-size:36px"></i>
+
+
+        <p class="projectDescription" id="projectDescription"></p>
       </div>
     </div>
+    
 
 
 </body>
