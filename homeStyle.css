@@ -18,24 +18,29 @@
 }
 
 #lightnovelProject{
-    background-color: transparent;
     margin-top: 2%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    width: 20vw;
+    width: 13vw;
 }
 
 #pincodeProject{
     cursor: pointer;
     transition: 0.5s ease-in-out;
     margin-top: 3%;
-
+    width: 6.5vw;
 }
 
 .selected{
-    background-color: blue !important;
     margin-left: 50%;
     transition: 0.5s ease-in-out;
-    width: 13vw !important;
+    color: black;
 }
 
+#Name{
+    border: none !important;
+    background-color: transparent !important;
+}
+#Name:hover{
+    color: black;
+}
