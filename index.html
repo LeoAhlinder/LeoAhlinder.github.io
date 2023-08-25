@@ -16,32 +16,33 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" >
-          <button class="navbar-brand" href="#" style="margin-right: 65%; margin-left: 1%;" id="Name" onclick="changeTheme()">Leo Ahlinder</button>
+          <button class="navbar-brand" style="margin-right: 65%; margin-left: 1%;" id="Name" onclick="changeTheme()">Leo Ahlinder</button>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <button class="nav-link" aria-current="page" href="#">About Me</button>
-              <button class="nav-link" href="#">Projects</button>
-              <button class="nav-link" href="#">Contant Me</button>
+              <button class="nav-link" aria-current="page">About Me</button>
+              <button class="nav-link" >Projects</button>
+              <button class="nav-link" >Contant Me</button>
               <button class="nav-link" onclick="window.open('https://github.com/xxudon')">Github</button>
             </div>
           </div>
         </div>
       </nav>
-    </div>
-    <div class="container-sm">
-      <button class="projectButton" onclick="selectedProject(0)">Projects</button>
-      <h3 id="lightnovelProject" onclick="selectedProject(lightnovelProject)">Light Novels Online</h3>
-      <h3 id="pincodeProject" onclick="selectedProject(pincodeProject)">Emplyoee</h3>
-      <div class="container-sm" id="projectText">
-        <h4 class="projectDesc" id="projectName"></h4>
-  
+    <div class="d-flex flex-row justify-content-evenly align-items-center Wrapper column-gap-5">
+      <div class="containerL" id="projectNameContainer">
+        <button class="projectButton" onclick="selectedProject(0)">Projects</button>
+        <button class="d-block projectButton" id="lightnovelProject" onclick="selectedProject(lightnovelProject)">Light Novels Online</button>
+        <button class="d-block projectButton" id="pincodeProject" onclick="selectedProject(pincodeProject)">Employee</button>
+      </div>
+      <div class="containerL" id="gradientContainer">
+        
+      </div>
+      <div class="containerL">
+        <p id="projectName"></p>
       </div>
     </div>
-    
-
 
 
 </body>

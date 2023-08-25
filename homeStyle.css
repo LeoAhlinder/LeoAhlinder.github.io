@@ -8,34 +8,36 @@
     color: white !important;
 }
 
-.container-sm{
-    background-color: transparent;
-    margin-top: 5%;   
-    height: 70vh;
-    width: 40vw !important;
-    position: absolute;
-    left: 3%;
+
+.containerL{
+    width: 30vw;
+    background-color: gray;
+    height: 60vh;
 }
 
 #lightnovelProject{
-    margin-top: 2%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    width: 13vw;
+    width: 9vw;
+    
 }
+#gradientContainer{
+    background: rgb(33,37,41);
+    background: linear-gradient(90deg, rgba(33,37,41,0) 0%, rgba(33,37,41,1) 20%, rgba(33,37,41,1) 80%, rgba(33,37,41,0) 100%);
 
+}
 #pincodeProject{
     cursor: pointer;
     transition: 0.5s ease-in-out;
     margin-top: 3%;
-    width: 6.5vw;
+    width: 5vw;
 }
 
 .selected{
     margin-left: 140%;
     z-index: 1000px !important;
     transition: 0.5s ease-in-out;
-    color: red;
+    color: gray;
     top: 20px;
 }
 
@@ -49,23 +51,42 @@
 
 #projectText{
     background-color: gray;
-    position: absolute;
-    margin-left:120%;
-    top: 0;
 }
 
 .projectDesc{
-    margin-top: 2%;
-    margin-left: 1%;
+    color: transparent;
 }
 
 #projectName{
-    transition: 5s ease-in-out;
-    color: red;
+    transition: 1s ease-in-out;
+    color: black;
+    margin-top: 2%;
+    font-size: 180%;
+    margin-left: 2%;
 }
 
 .projectButton{
     border: none;
     background-color: transparent;
-    font-size: 250%;
+    font-size: 150%;
+    margin-bottom: 4%;
+}
+
+.projectButton:hover{
+    color: gray;
+}
+
+.Graident{
+    
+    background: rgb(33,37,41);
+    background: linear-gradient(90deg, rgba(33,37,41,0) 0%, rgba(33,37,41,1) 50%, rgba(33,37,41,0) 100%);;
+    
+}
+
+.Wrapper{
+    margin-top: 5%;
+}
+
+#projectNameContainer{
+    background-color: transparent;
 }
