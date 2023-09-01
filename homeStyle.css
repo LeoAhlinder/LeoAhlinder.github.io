@@ -2,7 +2,6 @@
     background-color: transparent !important;
     margin: 0 5px;
     border: 5px;
-    font-size: 1.75rem !important;
     
 }
 
@@ -22,8 +21,7 @@
 #lightnovelProject{
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    width: 35%;
-    font-size: 2vw;
+    font-size: 2rem;
 
 }
 #gradientContainer{
@@ -35,9 +33,33 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
     margin-top: 3%;
-    width: 33%;
-    font-size: 2vw;
+    font-size: 2rem;
+}
 
+@media screen and (max-width:800px) {
+    #pincodeProject{
+        font-size: 100%;
+    }
+    #lightnovelProject{
+        font-size: 100%;
+    }
+    .projectButton{
+        font-size: 100% !important;
+    }
+    
+
+}
+
+@media screen and (max-width:1000px) {
+    #projectName{
+        font-size: 100% !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #projectName{
+        font-size: 70% !important;
+    }
 }
 
 .selected{
@@ -68,7 +90,7 @@
     transition: 1s ease-in-out;
     color: black;
     margin-top: 2%;
-    font-size: 180%;
+    font-size: 2rem;
     margin-left: 2%;
 }
 
@@ -77,7 +99,7 @@
 .projectButton{
     border: none;
     background-color: transparent;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     margin-bottom: 4%;
 
 }
@@ -127,5 +149,5 @@
     position: absolute;
     bottom: 0;
     margin-bottom: 2%;
-    font-size: 2vw !important;  
+    font-size: 2rem !important;  
 }
