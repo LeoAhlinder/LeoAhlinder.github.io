@@ -16,7 +16,7 @@ function selectedProject(project) {
 
 	const projectDescriptionText = [
 		"Web-based employee management system that allows employees to record their work hours, clock in and out, track break times using a 4-digit pin code, and view their calculated pay. The system is managed by an admin who can add new employees, set their pay rates, and make adjustments as needed.",
-		"TALWDWOAM",
+		"Books online",
 	];
 
 	const gitHubLinks = [
@@ -31,6 +31,8 @@ function selectedProject(project) {
 			elements[i].classList.remove("selected");
 			elements[i].style.opacity = 1;
 			const githubIcons = document.getElementsByClassName("fa");
+			document.getElementById("projectBox").classList.add("containerL");
+			document.getElementById("projectBox").classList.remove("containerLUsed");
 			for (const githubIcon of githubIcons) {
 				document.getElementById("projectBox").removeChild(githubIcon);
 			}
@@ -48,6 +50,8 @@ function selectedProject(project) {
 				project.classList.remove("selected");
 				document.getElementById("projectName").innerHTML = "";
 				document.getElementById("projectDescription").innerHTML = "";
+				document.getElementById("projectBox").classList.add("containerL");
+				document.getElementById("projectBox").classList.remove("containerLUsed");
 				project.style.opacity = 1;
 				const githubIcons = document.getElementsByClassName("fa");
 				for (const githubIcon of githubIcons) {
@@ -55,20 +59,23 @@ function selectedProject(project) {
 				}
 			} else {
 				project.classList.add("selected");
+			
 				document.getElementById("projectName").innerHTML = "";
 				document.getElementById("projectDescription").innerHTML = "";
 				project.style.opacity = 0;
 
 				setTimeout(function () {
+					document.getElementById("projectBox").classList.remove("containerL");
+					document.getElementById("projectBox").classList.add("containerLUsed");
 					document.getElementById("projectName").innerHTML = project.innerHTML;
 				}, 500);
 				setTimeout(function () {
-					document.getElementById("projectDescription").innerHTML =
-						projectDescriptionText[i];
+					document.getElementById("projectDescription").innerHTML = projectDescriptionText[i];
 					const li = document.createElement("li");
 					li.classList.add("fa", "fa-github", "githubIcon");
+					li.setAttribute("target","_blank");
 					li.addEventListener("click", function () {
-						window.location = gitHubLinks[i];
+						window.open(gitHubLinks[i],"_blank");
 					});
 
 					document.getElementById("projectBox").append(li);
@@ -81,6 +88,8 @@ function selectedProject(project) {
 			for (const githubIcon of githubIcons) {
 				document.getElementById("projectBox").removeChild(githubIcon);
 			}
+			document.getElementById("projectBox").classList.add("containerL");
+			document.getElementById("projectBox").classList.remove("containerLUsed");
 		}
 	}
 }

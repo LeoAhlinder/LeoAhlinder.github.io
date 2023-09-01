@@ -18,6 +18,28 @@
     position: relative;
 }
 
+.containerLUsed{
+    width: 30vw;
+    background-color: gray;
+    height: 60vh;
+    margin-right: 3%;
+    position: relative;
+}
+
+@media screen and (max-width:500px) {
+    .containerL{
+        background-color: transparent;
+    }
+    .containerLUsed{
+        background-color: gray;
+        height: 60vh;
+        margin-right: 3%;
+        position: relative;
+        width: 30vw;
+
+    }
+}
+
 #lightnovelProject{
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -129,15 +151,18 @@
     color: white;
     margin-left: 2%;
     position: relative;
-    font-size: 130%;
+    font-size: 150%;
 
     @media screen and (max-width:1200px) {
-        font-size:100%;
+        font-size:120%;
     }
     @media screen and (max-width:700px) {
-        font-size:80%;
+        font-size:95%;
     }
     @media screen and (max-width:500px) {
+        font-size:70%;
+    }
+    @media screen and (max-width:350px) {
         font-size:60%;
     }
 }
