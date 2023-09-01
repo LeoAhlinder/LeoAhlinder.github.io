@@ -2,6 +2,8 @@
     background-color: transparent !important;
     margin: 0 5px;
     border: 5px;
+    font-size: 1.75rem !important;
+    
 }
 
 .nav-link:hover{
@@ -13,13 +15,16 @@
     width: 30vw;
     background-color: gray;
     height: 60vh;
+    margin-right: 3%;
+    position: relative;
 }
 
 #lightnovelProject{
     cursor: pointer;
     transition: 0.5s ease-in-out;
     width: 35%;
-    
+    font-size: 2vw;
+
 }
 #gradientContainer{
     background: rgb(33,37,41);
@@ -31,6 +36,8 @@
     transition: 0.5s ease-in-out;
     margin-top: 3%;
     width: 33%;
+    font-size: 2vw;
+
 }
 
 .selected{
@@ -65,11 +72,14 @@
     margin-left: 2%;
 }
 
+
+
 .projectButton{
     border: none;
     background-color: transparent;
-    font-size: 150%;
+    font-size: 2.5vw;
     margin-bottom: 4%;
+
 }
 
 .projectButton:hover{
@@ -96,6 +106,7 @@
     transition: 1s ease-in-out;
     color: white;
     margin-left: 2%;
+    position: relative;
     font-size: 130%;
 
     @media screen and (max-width:1200px) {
@@ -113,4 +124,8 @@
     cursor: pointer;
     color: black;
     margin-left: 2%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2%;
+    font-size: 2vw !important;  
 }
