@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark" id="darkMode">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="homeStyle.css">
-    <script src="javascript.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Leos Portfolio</title>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="homeStyle.css">
+  <script src="javascript.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Leos Portfolio</title>
 </head>
 
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 
-<body >
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid" >
-          <button class="navbar-brand" style="margin-right: 65%; margin-left: 1%;" id="Name" onclick="changeTheme()">Leo Ahlinder</button>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <button class="nav-link" aria-current="page">About Me</button>
-              <button class="nav-link" >Projects</button>
-              <button class="nav-link" >Contant Me</button>
-            </div>
-          </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-brand" id="Name" onclick="changeTheme()">Leo Ahlinder</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <button class="nav-link" aria-current="page" onclick="selectedProject(aboutMe)">About Me</button>
+          <button class="nav-link">Projects</button>
+          <button class="nav-link">Contant Me</button>
         </div>
-      </nav>
-    <div class="d-flex flex-row justify-content-evenly align-items-center Wrapper column-gap-5">
-      <div class="containerL" id="projectNameContainer">
-        <button class="projectButton" onclick="selectedProject(0)">Projects</button>
-        <button class="d-block projectButton" id="lightnovelProject" onclick="selectedProject(lightnovelProject)">Light&nbsp;novels&nbsp;online</button>
-        <button class="d-block projectButton" id="pincodeProject" onclick="selectedProject(pincodeProject)">Tracking&nbsp;employees</button>
-      </div>
-      <div class="containerL" id="gradientContainer">
-      </div>
-      <div class="containerL" id="projectBox">
-        <p id="projectName"></p>
-
-
-
-        <p class="projectDescription" id="projectDescription"></p>
       </div>
     </div>
-    
+  </nav>
+  <div class="d-flex flex-row justify-content-evenly align-items-center Wrapper column-gap-5">
+    <div class="containerL" id="projectNameContainer">
+      <button class="projectButton" onclick="selectedProject(0)">Projects</button>
+      <button class="d-block projectButton" id="lightnovelProject"
+        onclick="selectedProject(lightnovelProject)">Light&nbsp;novels&nbsp;online</button>
+      <button class="d-block projectButton" id="pincodeProject"
+        onclick="selectedProject(pincodeProject)">Tracking&nbsp;employees</button>
+      <button class="d-block projectButton elementToView projects" id="carRental"
+        onclick="selectedProject(carRental)">Car
+        rental</button>
 
 
+
+      <button class="d-block projectButton elementToView" onclick="selectedProject(aboutMe)" id="aboutMe">About
+        Me</button>
+    </div>
+    <div class="containerL" id="gradientContainer">
+    </div>
+    <div class="containerL" id="projectBox">
+      <p id="projectName"></p>
+      <p class="projectDescription" id="projectDescription"></p>
+    </div>
+  </div>
 </body>
+
 </html>
