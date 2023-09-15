@@ -11,7 +11,11 @@ function selectedProject(project) {
   const pindeCode = document.getElementById("pincodeProject");
   const lightnovelProject = document.getElementById("lightnovelProject");
   const carRental = document.getElementById("carRental");
-  const aboutMe = document.getElementById("aboutMe");
+
+  const projectDescription = document.getElementById("projectDescription");
+  const projectBox = document.getElementById("projectBox");
+  const projectName = document.getElementById("projectName");
+  //Projecttext,livedemo and github links are the same order as these are made
 
   const projectDescriptionText = [
     "Web-based employee management system that allows employees to record their work hours, clock in and out, track break times using a 4-digit pin code, and view their calculated pay. The system is managed by an admin who can add new employees, set their pay rates, and make adjustments as needed.",
@@ -34,54 +38,63 @@ function selectedProject(project) {
     "",
   ];
 
-  const elements = [pindeCode, lightnovelProject, carRental, aboutMe];
+  const elements = [pindeCode, lightnovelProject, carRental];
 
   if (project === 0) {
     for (let i = 0; i < elements.length; i++) {
       elements[i].classList.remove("selected");
       elements[i].style.opacity = 1;
       const githubIcons = document.getElementsByClassName("fa");
-      document.getElementById("projectBox").classList.add("containerL");
-      document.getElementById("projectBox").classList.remove("containerLUsed");
+      projectBox.classList.add("containerL");
+      projectBox.classList.remove("containerLUsed");
       for (const githubIcon of githubIcons) {
-        document.getElementById("projectBox").removeChild(githubIcon);
+        projectBox.removeChild(githubIcon);
       }
     }
 
-    document.getElementById("projectName").innerHTML = "";
-    document.getElementById("projectDescription").innerHTML = "";
+    projectName.innerHTML = "";
+    projectDescription.innerHTML = "";
     return;
   }
 
   for (let i = 0; i < elements.length; i++) {
-    console.log(i);
     if (elements[i] === project) {
       if (project.classList.contains("selected")) {
         project.classList.remove("selected");
-        document.getElementById("projectName").innerHTML = "";
-        document.getElementById("projectDescription").innerHTML = "";
-        document.getElementById("projectBox").classList.add("containerL");
-        document
-          .getElementById("projectBox")
-          .classList.remove("containerLUsed");
+        projectName.innerHTML = "";
+        projectDescription.innerHTML = "";
+        projectBox.classList.add("containerL");
+        projectBox.classList.remove("containerLUsed");
         project.style.opacity = 1;
         const githubIcons = document.getElementsByClassName("fa");
         for (const githubIcon of githubIcons) {
-          document.getElementById("projectBox").removeChild(githubIcon);
+          projectBox.removeChild(githubIcon);
         }
       } else {
         project.classList.add("selected");
-        document.getElementById("projectName").innerHTML = "";
-        document.getElementById("projectDescription").innerHTML = "";
+        projectName.innerHTML = "";
+        projectDescription.innerHTML = "";
         project.style.opacity = 0;
         setTimeout(function () {
-          document.getElementById("projectBox").classList.remove("containerL");
-          document.getElementById("projectBox").classList.add("containerLUsed");
-          document.getElementById("projectName").innerHTML = project.innerHTML;
+          projectBox.classList.remove("containerL");
+          projectBox.classList.add("containerLUsed");
+          projectName.innerHTML = project.innerHTML;
         }, 700);
         setTimeout(function () {
-          document.getElementById("projectDescription").innerHTML =
-            projectDescriptionText[i];
+          let projectDescriptionIndex = 0;
+          let projectText = "";
+          function typeProjectName() {
+            if (projectDescriptionIndex < projectDescriptionText[i].length) {
+              projectText += projectDescriptionText[i].charAt(
+                projectDescriptionIndex
+              );
+              projectDescription.innerText = projectText;
+              projectDescriptionIndex++;
+              setTimeout(typeProjectName, 15);
+            }
+          }
+          typeProjectName();
+
           if (gitHubLinks[i] !== "") {
             const li = document.createElement("li");
             li.classList.add("fa", "fa-github", "githubIcon");
@@ -89,7 +102,7 @@ function selectedProject(project) {
             li.addEventListener("click", function () {
               window.open(gitHubLinks[i], "_blank");
             });
-            document.getElementById("projectBox").append(li);
+            projectBox.append(li);
           }
         }, 1000);
       }
@@ -98,15 +111,19 @@ function selectedProject(project) {
       elements[i].style.opacity = 1;
       const githubIcons = document.getElementsByClassName("fa");
       for (const githubIcon of githubIcons) {
-        document.getElementById("projectBox").removeChild(githubIcon);
+        projectBox.removeChild(githubIcon);
       }
-      document.getElementById("projectBox").classList.add("containerL");
-      document.getElementById("projectBox").classList.remove("containerLUsed");
+      projectBox.classList.add("containerL");
+      projectBox.classList.remove("containerLUsed");
     }
   }
 }
 
 function changeTheme() {
+  const sun = document.querySelector(".sun");
+  const moon = document.querySelector(".moon");
+  sun.classList.toggle("visible");
+  moon.classList.toggle("visible");
   const element = document.querySelector("html");
   if (element.getAttribute("id") === "darkMode") {
     element.removeAttribute("data-bs-theme");

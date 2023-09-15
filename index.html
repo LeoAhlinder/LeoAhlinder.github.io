@@ -20,20 +20,34 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <button class="navbar-brand" id="Name" onclick="changeTheme()">Leo Ahlinder</button>
+      <button id="containerT" aria-label="Toggle color mode" title="Toggle color mode" onclick="changeTheme()">
+        <div class="sun visible"></div>
+        <div class="moon">
+          <div class="star"></div>
+          <div class="star small"></div>
+        </div>
+      </button>
+      <button class="navbar-brand" id="Name">Leo Ahlinder</button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <button class="nav-link" aria-current="page" onclick="selectedProject(aboutMe)">About Me</button>
+          <button class="nav-link" aria-current="page">About Me</button>
           <button class="nav-link">Projects</button>
           <button class="nav-link">Contant Me</button>
+
         </div>
       </div>
     </div>
   </nav>
+
+  <div class="container-fluid aboutMe">
+
+
+  </div>
+
   <div class="d-flex flex-row justify-content-evenly align-items-center Wrapper column-gap-5">
     <div class="containerL" id="projectNameContainer">
       <button class="projectButton" onclick="selectedProject(0)">Projects</button>
@@ -44,12 +58,8 @@
       <button class="d-block projectButton elementToView projects" id="carRental"
         onclick="selectedProject(carRental)">Car
         rental</button>
-
-
-
-      <button class="d-block projectButton elementToView" onclick="selectedProject(aboutMe)" id="aboutMe">About
-        Me</button>
     </div>
+
     <div class="containerL" id="gradientContainer">
     </div>
     <div class="containerL" id="projectBox">
