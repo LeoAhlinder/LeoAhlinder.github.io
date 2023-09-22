@@ -5,6 +5,10 @@
     font-weight: bold !important;
 }
 
+*{
+    transition: 0.7s ease-in-out;
+}
+
 #homePage {
     background-image: url('pictures/shootingstar.jpg');
     background-position: center;
