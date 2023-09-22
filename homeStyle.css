@@ -9,6 +9,7 @@
     background-image: url('pictures/shootingstar.jpg');
     background-position: center;
     background-size: cover;
+    color: white;
 }
 
 .col{
@@ -124,14 +125,15 @@
 }
 
 html[data-bs-theme="light"] #meDescription {
-    text-shadow: 1px 1px 1px white;
+    text-shadow: none;
 }
 
 #aboutMe{
-
+    margin: 0 auto;
     width: 20%;
     height: auto;
-    background-color: rgba(128, 128, 128, 0.097);
+    background-color: rgba(70, 78, 109, 0.394);
+    box-shadow: 0px 5px 5px black;
 }
 
 #containerT {
