@@ -5,7 +5,9 @@ function selectedProject(projectPressed) {
   const library = document.getElementById("library");
   const carRental = document.getElementById("carRental");
   const barberShop = document.getElementById("barberShop")
-  
+
+
+  const showProjectsButton = document.getElementById("goBackToProjects")
   const projectTitle = document.getElementById("projectTitle")
   //Projecttext,livedemo and github links are the same order as these are made
 
@@ -29,9 +31,18 @@ function selectedProject(projectPressed) {
 
 
   for (const project of projects) {
-    if (project === projectPressed) {
+    if (projectPressed === 0){
+      if (project.classList.contains("selectedProject")){
+        project.classList.remove("selectedProject")
+      }
+      else{
+        project.style.display = "block"
+        showProjectsButton.style.display = "none"
+      }
+    }
+    else if (project === projectPressed) {
       project.classList.add("selectedProject");
-      console.log(project.classList);
+      showProjectsButton.style.display = "block"
       projectTitle.innerText = "";
     } else {
       project.style.display = "none";

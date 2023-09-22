@@ -41,15 +41,29 @@
 
 .selectedProject{
     background-color: red !important;
-    width: 60vw;
+    transform: scale(1);
+    width: 60%;
     left: 0;
     position: absolute !important;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20%;
 }
 
+@media screen and (max-width:800px) {
+    #backArrow{
+        width: 50%;
+    }
+}
+
+#goBackToProjects{
+    display: none;
+    width: auto;
+}
+
+#goBackToProjects:hover{
+    opacity: 0.7;
+}
 
 @media screen and (max-width:1200px) {
     .card-title{
@@ -80,23 +94,6 @@
     background-color: transparent !important;
     margin-right: 65%; 
     margin-left: 1%;
-}
-#Name:hover{
-    color: black;
-}
-
-#projectText{
-    background-color: gray;
-}
-
-.projectDesc{
-    color: transparent;
-}
-
-.projectName{
-    position: absolute;
-    
-    color: red;
 }
 
 #Title{
