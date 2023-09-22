@@ -30,7 +30,7 @@
 }
 
 .card-title{
-    color: white ;
+    color: white !important ;
     font-weight: bold !important;    
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.463);
