@@ -36,9 +36,14 @@
 }
 
 .selectedProject{
-    background-color: red;
-    align-items: center;
-    margin: 0 auto;
+    background-color: red !important;
+    width: 60vw;
+    left: 0;
+    position: absolute !important;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20%;
 }
 
 
@@ -146,7 +151,8 @@ html[data-bs-theme="light"] #meDescription {
 
 }
 
-@media screen and (max-width:400px) {
+
+@media screen and (max-width:450px) {
     #aboutMe{
         width: 80%;
     }
@@ -158,8 +164,7 @@ html[data-bs-theme="light"] #meDescription {
     }
 }
 
-
-#containerT {
+#colorModeContainer {
     width: 46px;
     height: 46px;
     box-sizing: border-box;

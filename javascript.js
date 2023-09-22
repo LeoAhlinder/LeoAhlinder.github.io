@@ -4,6 +4,8 @@ function selectedProject(projectPressed) {
   const employee = document.getElementById("employee");
   const library = document.getElementById("library");
   const carRental = document.getElementById("carRental");
+  
+  const projectTitle = document.getElementById("projectTitle")
   //Projecttext,livedemo and github links are the same order as these are made
 
   const projectDescriptionText = [
@@ -22,13 +24,18 @@ function selectedProject(projectPressed) {
 
   const projects = [carRental, library, employee];
 
+  const projectsTitle = ["Car Rental", "Library Online","Emplyoee Pay Tracker"]
+  let i = 0;
+
   for (const project of projects) {
     if (project === projectPressed) {
       project.classList.add("selectedProject");
       console.log(project.classList);
+      projectTitle.innerText = projectsTitle[i];
     } else {
       project.style.display = "none";
     }
+    i++
   }
 }
 
@@ -44,7 +51,7 @@ function changeTheme() {
   if (element.getAttribute("id") === "darkMode") {
     element.removeAttribute("data-bs-theme");
     element.removeAttribute("id", "darkMode");
-    element.setAttribute("id", "light");
+    element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
     background.style.backgroundImage = "url('pictures/sunrisebackground.png')";
   } else {
