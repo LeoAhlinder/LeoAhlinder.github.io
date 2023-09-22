@@ -33,8 +33,8 @@
       </button>
       <div class="collapse navbar-collapse align-items-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a href="#Me" class="nav-link fs-4" aria-current="page">Me</a>
-          <a href="#Projects" class="nav-link fs-4">Projects</a>
+          <a href="#me" class="nav-link fs-4" aria-current="page">Me</a>
+          <a href="#projects" class="nav-link fs-4">Projects</a>
           <a class="nav-link fs-4">Contact Me</a>
         </div>
       </div>
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div id="aboutMe" class="p-3">
-      <h3 class=" mt-2 ms-2 Title" id="Me">Me</h3>
+      <h3 class=" mt-2 ms-2 Title" id="me">Me</h3>
       <p class="ms-2" id="meDescription">Software developer studying at NTI gymnasiet.</p>
       <h3 class="p-2 Title text-start">My Skills</h3>
       <div class="skills">
@@ -98,7 +98,7 @@
   </div>
 
   <div class="d-flex flex-row justify-content-evenly align-items-center Wrapper column-gap-5 mt-5 mb-5">
-    <div class="container text-center" id="Projects">
+    <div class="container text-center" id="projects">
       <h1 class="mb-3" id="projectTitle">Projects</h1>
       <div class="row">
         <div class="col">
@@ -116,7 +116,7 @@
             <button class="projectButton" onclick="selectedProject(library)">
               <img src="pictures/librarypic.webp" class="card-img img-fluid" alt="...">
               <div class="card-img-overlay">
-                <h5 class="card-title">Online library</h5>
+                <h5 class="card-title">Online Library</h5>
               </div>
           </div>
           </button>
@@ -126,10 +126,19 @@
             <button class="projectButton" onclick="selectedProject(employee)">
               <img src="pictures/emplyoeepic.webp" class="card-img img-fluid" alt="...">
               <div class="card-img-overlay">
-                <h5 class="card-title">Employee pay tracker</h5>
+                <h5 class="card-title">Employee Pay Tracker</h5>
               </div>
             </button>
           </div>
+          <div class="col">
+            <div class="card text-bg-dark" id="barberShop">
+              <button class="projectButton" onclick="selectedProject(barberShop)">
+                <img src="pictures/barbershop.webp" class="card-img img-fluid" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Barber Shop</h5>
+                </div>
+              </button>
+            </div>
         </div>
       </div>
     </div>
