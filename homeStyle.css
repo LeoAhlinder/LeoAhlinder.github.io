@@ -168,6 +168,14 @@ html[data-bs-theme="light"] #meDescription {
     }
 }
 
+#Me{
+    scroll-margin-top: 500px;
+}
+
+a{
+    cursor: pointer;
+}
+
 #colorModeContainer {
     width: 46px;
     height: 46px;
@@ -302,3 +310,4 @@ html[data-bs-theme="light"] #meDescription {
     opacity: 0.7;
     transform: scale(0.45) rotate(35deg);
   }
+
