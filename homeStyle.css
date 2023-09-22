@@ -232,14 +232,14 @@ html[data-bs-theme="light"] #meDescription {
     box-shadow: 9px 3px 0px 0px black;
     opacity: 0;
     transform: scale(0.3) rotate(65deg);
-    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.2s;
   }
   
   .moon.visible {
     pointer-events: auto;
     opacity: 1;
     transform: scale(1) rotate(0deg);
-    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.2s;
   }
   
   .star {
@@ -295,7 +295,7 @@ html[data-bs-theme="light"] #meDescription {
     top: 50%;
     left: 37.5%;
     opacity: 0;
-    transition: all 0.2s ease-in 0.45s;
+    transition: all 0.3s ease-in 0.45s;
   }
   
   .moon.visible .star.small {
