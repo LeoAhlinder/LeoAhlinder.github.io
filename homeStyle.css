@@ -12,6 +12,9 @@
     color: white;
     text-shadow: 2px 2px 2px black;
 }
+.icon{
+    height: 5% !important;
+}
 
 .col{
     height: 20vw;
@@ -28,7 +31,7 @@
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.463);
     width: 50% !important;
-    width: auto;
+    align-items: center !important;
     margin: 0 auto;
 }
 
@@ -38,26 +41,13 @@
     margin: 0 auto;
 }
 
-.card-text{
-    color:gold;
-    background-color: rgba(0, 0, 0, 0.463);
-    border-radius: 20px;
-}
 
 @media screen and (max-width:1200px) {
-    .card-text{
-        font-size: 1rem;
-    }
     .card-title{
         font-size: 1.1rem;
     }
 }
 
-@media screen and (max-width:770px) {
-    .card-text{
-        display: none !important;
-    }
-}
 
 @media screen and (max-width:355px) {
     .card-title{
@@ -123,19 +113,51 @@
 #meDescription{
     font-weight: bold;
     text-shadow: 2px 2px 2px black;
+    margin-bottom: 0;
+}
+
+.Title{
+    margin-bottom: 3px;
 }
 
 html[data-bs-theme="light"] #meDescription {
     text-shadow: 2px 2px 2px black;
 }
 
+
 #aboutMe{
     margin: 0 auto;
-    width: 20%;
+    width: 30%;
     height: auto;
     background-color: rgba(70, 78, 109, 0.394);
     box-shadow: 0px 5px 5px black;
 }
+
+@media screen and (max-width:998px) {
+    #aboutMe{
+        width: 45%;
+    }
+    #meDescription{
+        font-size: 0.8rem !important;
+    }
+    .subTitle{
+        font-size: 1rem !important;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    #aboutMe{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:670px) {
+    h3{
+        font-size: 1.5rem !important;
+    }
+}
+
 
 #containerT {
     width: 46px;
