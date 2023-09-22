@@ -10,6 +10,7 @@
     background-position: center;
     background-size: cover;
     color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
 .col{
@@ -125,7 +126,7 @@
 }
 
 html[data-bs-theme="light"] #meDescription {
-    text-shadow: none;
+    text-shadow: 2px 2px 2px black;
 }
 
 #aboutMe{
