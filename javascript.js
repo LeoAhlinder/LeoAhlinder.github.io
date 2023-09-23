@@ -64,6 +64,7 @@ function changeTheme() {
     element.removeAttribute("id", "darkMode");
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
+    // background.style.color = "red"
     background.style.backgroundImage = "url('pictures/sunrisebackground.png')";
   } else {
     element.removeAttribute("data-bs-theme");
@@ -73,3 +74,15 @@ function changeTheme() {
     background.style.backgroundImage = "url('pictures/shootingstar.jpg')";
   }
 }
+
+function checkColorTheme(){
+
+  let colorTheme = localStorage.getItem("colorTheme");
+
+  colorTheme = (colorTheme !== "lightMode" && colorTheme !== "darkMode") ? "darkMode" : colorTheme;
+
+  if (colorTheme === "lightMode"){
+    changeTheme()
+  }
+}
+

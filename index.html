@@ -10,14 +10,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <title>Leos Portfolio</title>
 </head>
 
-<body>
+<body onload="checkColorTheme()">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <script>
+    AOS.init();
+  </script>
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <button id="colorModeContainer" aria-label="Toggle color mode" title="Toggle color mode" onclick="changeTheme()">
@@ -109,7 +115,7 @@
       <h1 class="mb-3" id="projectTitle">Projects</h1>
       <div class="row">
         <div class="col">
-          <div class="card text-bg-dark" id="carRental">
+          <div class="card text-bg-dark" id="carRental"  data-aos="fade-up" data-aos-duration="1500">
             <button class="projectButton" onclick="selectedProject(carRental)">
               <img src="pictures/carRentalPic.webp" class="card-img img-fluid" alt="...">
               <div class="card-img-overlay">
@@ -119,7 +125,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card text-bg-dark" id="library">
+          <div class="card text-bg-dark" id="library" data-aos="fade-up" data-aos-duration="1500">
             <button class="projectButton" onclick="selectedProject(library)">
               <img src="pictures/librarypic.webp" class="card-img img-fluid" alt="...">
               <div class="card-img-overlay">
@@ -129,7 +135,7 @@
           </button>
         </div>
         <div class="col">
-          <div class="card text-bg-dark" id="employee">
+          <div class="card text-bg-dark" id="employee" data-aos="fade-up" data-aos-duration="1500">
             <button class="projectButton" onclick="selectedProject(employee)">
               <img src="pictures/emplyoeepic.webp" class="card-img img-fluid" alt="...">
               <div class="card-img-overlay">
@@ -138,7 +144,7 @@
             </button>
           </div>
           <div class="col">
-            <div class="card text-bg-dark" id="barberShop">
+            <div class="card text-bg-dark" id="barberShop" data-aos="fade-up" data-aos-duration="1500">
               <button class="projectButton" onclick="selectedProject(barberShop)">
                 <img src="pictures/barbershop.webp" class="card-img img-fluid" alt="...">
                 <div class="card-img-overlay">
