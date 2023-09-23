@@ -64,13 +64,15 @@ function changeTheme() {
     element.removeAttribute("id", "darkMode");
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
-    // background.style.color = "red"
+    localStorage.setItem("colorTheme","lightMode")
     background.style.backgroundImage = "url('pictures/sunrisebackground.png')";
   } else {
     element.removeAttribute("data-bs-theme");
     element.removeAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "dark");
     element.setAttribute("id", "darkMode");
+    localStorage.setItem("colorTheme","darkMode")
+
     background.style.backgroundImage = "url('pictures/shootingstar.jpg')";
   }
 }
