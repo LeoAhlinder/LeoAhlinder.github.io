@@ -33,6 +33,7 @@
     width: 80% !important;
     align-items: center !important;
     margin: 0 auto;
+    font-size: 1.75rem;
 }
 
 .selectedProject{
@@ -44,6 +45,10 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+#projectTitle{
+    transition: 0s !important;
 }
 
 @media screen and (max-width:800px) {

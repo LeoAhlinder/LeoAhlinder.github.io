@@ -27,11 +27,11 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <button id="colorModeContainer" aria-label="Toggle color mode" title="Toggle color mode" onclick="changeTheme()">
-        <div class="sun visible"></div>
-        <div class="moon">
-          <div class="star"></div>
-          <div class="star small"></div>
-        </div>
+        <span class="sun visible"></span>
+        <span class="moon">
+          <span class="star"></span>
+          <span class="star small"></span>
+        </span>
       </button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,16 +63,16 @@
             <h5 class="text-center subTitle">Programming Languages</h5>
             <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
               <div class="col icon">
-                <div class="p-2"><img src="icons/js.png"></div>
+                <div class="p-2"><img src="icons/js.png" alt="jsIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/html.png"></div>
+                <div class="p-2"><img src="icons/html.png" alt="htmlIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/css-3.png"></div>
+                <div class="p-2"><img src="icons/css-3.png" alt="cssIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/c-sharp.webp"></div>
+                <div class="p-2"><img src="icons/c-sharp.webp" alt="csharpIcon"></div>
               </div>
             </div>
           </div>
@@ -82,19 +82,19 @@
             <h5 class="text-center subTitle">Other skills</h5>
             <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
               <div class="col icon">
-                <div class="p-2"><img src="icons/express-js-icon.webp"></div>
+                <div class="p-2"><img src="icons/express-js-icon.webp" alt="expressJsIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/react.png"></div>
+                <div class="p-2"><img src="icons/react.png" alt="reactIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/mysql.webp"></div>
+                <div class="p-2"><img src="icons/mysql.webp" alt="mysqlIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/node-js-icon.webp"></div>
+                <div class="p-2"><img src="icons/node-js-icon.webp" alt="nodeJsIcon"></div>
               </div>
               <div class="col icon">
-                <div class="p-2"><img src="icons/git.webp"></div>
+                <div class="p-2"><img src="icons/git.webp" alt="gitIcon"></div>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
 
   <div class="ms-3 mt-3" >
     <button id="goBackToProjects" class="bg-transparent border-0" onclick="selectedProject(0)">
-      <img src="icons/arrow.png" alt="" id="backArrow">
+      <img src="icons/arrow.png" alt="backArrow" id="backArrow">
     </button>
   </div>
 
@@ -115,46 +115,48 @@
       <h1 class="mb-3" id="projectTitle">Projects</h1>
       <div class="row">
         <div class="col">
-          <div class="card text-bg-dark" id="carRental"  data-aos="fade-up" data-aos-duration="1500">
+          <div class="card text-bg-dark" id="carRental"  data-aos="flip-up" >
             <button class="projectButton" onclick="selectedProject(carRental)">
-              <img src="pictures/carRentalPic.webp" class="card-img img-fluid" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Car rental Website</h5>
-              </div>
+              <img src="pictures/carRentalPic.webp" class="card-img img-fluid" alt="carRentalPic">
+              <span class="card-img-overlay">
+                <span class="card-title">Car rental Website</span>
+              </span>
             </button>
           </div>
         </div>
         <div class="col">
-          <div class="card text-bg-dark" id="library" data-aos="fade-up" data-aos-duration="1500">
+          <div class="card text-bg-dark" id="library" data-aos="flip-up" >
             <button class="projectButton" onclick="selectedProject(library)">
-              <img src="pictures/librarypic.webp" class="card-img img-fluid" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Online Library</h5>
-              </div>
+              <img src="pictures/librarypic.webp" class="card-img img-fluid" alt="libraryPic">
+              <span class="card-img-overlay">
+                <span class="card-title">Online Library</span>
+
+              </span>
+            </button>
           </div>
-          </button>
         </div>
         <div class="col">
-          <div class="card text-bg-dark" id="employee" data-aos="fade-up" data-aos-duration="1500">
+          <div class="card text-bg-dark" id="employee" data-aos="flip-up" >
             <button class="projectButton" onclick="selectedProject(employee)">
-              <img src="pictures/emplyoeepic.webp" class="card-img img-fluid" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Employee Pay Tracker</h5>
-              </div>
+              <img src="pictures/emplyoeepic.webp" class="card-img img-fluid" alt="employeePic">
+              <span class="card-img-overlay">
+                <span class="card-title">Employee Pay Tracker</span>
+              </span>
             </button>
           </div>
           <div class="col">
-            <div class="card text-bg-dark" id="barberShop" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card text-bg-dark" id="barberShop" data-aos="flip-up" >
               <button class="projectButton" onclick="selectedProject(barberShop)">
-                <img src="pictures/barbershop.webp" class="card-img img-fluid" alt="...">
-                <div class="card-img-overlay">
-                  <h5 class="card-title">Barber Shop Website</h5>
-                </div>
+                <img src="pictures/barbershop.webp" class="card-img img-fluid" alt="barberShop">
+                <span class="card-img-overlay">
+                  <span class="card-title">Barber Shop Website</span>
+                </span>
               </button>
             </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 </body>
