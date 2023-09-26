@@ -57,7 +57,8 @@ function changeTheme() {
   moon.classList.toggle("visible");
 
   const backgroundImage = document.getElementById("homePage");
-  const navBar = document.getElementById("navbar")
+
+  const cssRoot = document.querySelector(':root')
 
   const element = document.querySelector("html");
   if (element.getAttribute("id") === "darkMode") {
@@ -65,18 +66,24 @@ function changeTheme() {
     element.removeAttribute("id", "darkMode");
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
+
     document.body.style.backgroundColor = "RGB(255, 220, 220)"
-    localStorage.setItem("colorTheme","lightMode")
+    cssRoot.style.setProperty("--backgroundColor","rgb(255, 220, 220)")
     backgroundImage.style.backgroundImage = "url('pictures/sunrisebackground.png')";
+
+    localStorage.setItem("colorTheme","lightMode")
+
   } else {
     element.removeAttribute("data-bs-theme");
     element.removeAttribute("id", "lightMode");
-    document.body.style.backgroundColor = "RGB(43, 48, 53)"
     element.setAttribute("data-bs-theme", "dark");
     element.setAttribute("id", "darkMode");
-    localStorage.setItem("colorTheme","darkMode")
 
+    document.body.style.backgroundColor = "RGB(43, 48, 53)"
+    cssRoot.style.setProperty("--backgroundColor","rgb(43, 48, 53)")
     backgroundImage.style.backgroundImage = "url('pictures/shootingstar.jpg')";
+
+    localStorage.setItem("colorTheme","darkMode")
   }
 }
 

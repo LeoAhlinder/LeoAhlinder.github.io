@@ -1,5 +1,5 @@
 :root{
-    --lightModeBackground:rgb(255, 220, 220);
+    --backgroundColor:rgb(43, 48, 53);
 }
 
 .nav-link{
@@ -9,9 +9,9 @@
 }
 
 #customNavBar{
-    background-color:var(--lightModeBackground) !important;
+    background-color:var(--backgroundColor) !important;
 }
-
+    
 *{
     transition: 0.4s ease-in-out;
 }
