@@ -26,7 +26,7 @@
 </head>
 
 <body onload="checkColorTheme()">
- 
+
   <!-- AOS library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -57,7 +57,7 @@
       </div>
     </div>
   </nav>
-<!-- Info about me -->
+  <!-- Info about me -->
   <div style="height: 100vh;" id="homePage" class="pt-5">
     <div class="d-flex justify-content-center align-items-center">
       <div class="container-fluid mt-5" id="Title">
@@ -115,67 +115,89 @@
   </div>
 
   <!-- Go back to projects arrow -->
-  <div class="ms-3 mt-3" >
+  <div class="ms-3 mt-3" class="projectsArrow">
     <button id="goBackToProjects" class="bg-transparent border-0" onclick="selectedProject(0)">
       <img src="icons/arrow.png" alt="backArrow" id="backArrow">
     </button>
   </div>
 
   <!-- All projects -->
-  <div class="d-flex flex-row justify-content-evenly align-items-center Wrapper column-gap-5 mt-5 mb-5">
-    <div class="container text-center" id="projects">
-      <h1 class="mb-3" id="projectTitle">Projects</h1>
+  <div id="projects">
+    <div class="container pt-0 text-center">
       <div class="row">
-        <div class="col">
-          <div class="card text-bg-dark" id="carRental"  data-aos="flip-up">
-            <button class="projectButton" onclick="selectedProject(carRental)">
-              <img src="pictures/carRentalPic.webp" class="card-img img-fluid" alt="carRentalPic">
-              <span class="card-img-overlay">
-                <p class="card-title">Car rental Website</p>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card text-bg-dark" id="library" data-aos="flip-up" >
-            <button class="projectButton" onclick="selectedProject(library)">
-              <img src="pictures/librarypic.webp" class="card-img img-fluid" alt="libraryPic">
-              <span class="card-img-overlay">
-                <p class="card-title">Online Library</p>
-
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card text-bg-dark" id="employee" data-aos="flip-up" >
-            <button class="projectButton" onclick="selectedProject(employee)">
-              <img src="pictures/emplyoeepic.webp" class="card-img img-fluid" alt="employeePic">
-              <span class="card-img-overlay">
-                <p class="card-title">Employee Pay Tracker</p>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="row pt-3">
-          <div class="col">
-            <div class="card text-bg-dark" id="barberShop" data-aos="flip-up" >
-              <button class="projectButton" onclick="selectedProject(barberShop)">
-                <img src="pictures/barbershop.webp" class="card-img img-fluid" alt="barberShop">
-                <span class="card-img-overlay">
-                  <p class="card-title">Barber Shop Website</p>
-                </span>
+        <div class="col-xl-4 col-md-6 my-5">
+          <div class="container d-flex justify-content-center">
+            <div class="card" id="carRental">
+              <button class="projectButton" onclick="selectedProject(carRental)">
+                <img src="pictures/carRentalPic.webp" class="card-img-top" alt="carRental">
+                <div class="card-body">
+                  <h5 class="card-title">Car rental website</h5>
+                  <p class="card-text mb-2">Frontend programming and web-design project.</p>
+                </div>
               </button>
             </div>
           </div>
-          <!-- Empty coloums for upcoming projects -->
-          <div class="col">
-          </div>
-          <div class="col">
+        </div>
+        <div class="col-xl-4 col-md-6 my-5">
+          <div class="container d-flex justify-content-center">
+            <div class="card" id="library">
+              <button class="projectButton" onclick="selectedProject(library)">
+                <img src="pictures/librarypic.webp" class="card-img-top" alt="Library">
+                <div class="card-body">
+                  <h5 class="card-title">A Online Library</h5>
+                  <p class="card-text mb-2">Full Stack and web-design project.</p>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
+        <div class="col-xl-4 col-md-6 my-5 ">
+          <div class="container d-flex justify-content-center">
+            <div class="card" id="employee">
+              <button class="projectButton" onclick="selectedProject(employee)">
+                <img src="pictures/emplyoeepic.webp" class="card-img-top" alt="Emplyoees">
+                <div class="card-body">
+                  <h5 class="card-title">Emplyoee pay and work tracker</h5>
+                  <p class="card-text mb-2">Full Stack project.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div id="projects">
+    <div class="container pt-0 text-center">
+      <div class="row">
+        <div class="col-xl-4 col-md-6 my-5">
+          <div class="container d-flex justify-content-center">
+            <div class="card" id="barberShop">
+              <button class="projectButton" onclick="selectedProject(barberShop)">
+                <img src="pictures/barbershop.webp" class="card-img-top" alt="barbershop">
+                <div class="card-body">
+                  <h5 class="card-title">Frisör Saxé</h5>
+                  <p class="card-text mb-2">Frontend programming and web-design project.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 my-5 ">
+          <div class="container d-flex justify-content-center">
+            <div class="card" id="GMTK">
+              <button class="projectButton" onclick="selectedProject(GMTK)">
+                <img src="pictures/gamedev.webp" class="card-img-top" alt="Emplyoees">
+                <div class="card-body">
+                  <h5 class="card-title">Game for GMTK-2021</h5>
+                  <p class="card-text mb-2">Game development.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="container-fluid contactMe" style="background-color: red;">

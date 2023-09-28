@@ -1,49 +1,49 @@
 function selectedProject(projectPressed) {
-  console.log(projectPressed);
-
   const employee = document.getElementById("employee");
   const library = document.getElementById("library");
   const carRental = document.getElementById("carRental");
-  const barberShop = document.getElementById("barberShop")
+  const barberShop = document.getElementById("barberShop");
 
-
-  const showProjectsButton = document.getElementById("goBackToProjects")
-  const projectTitle = document.getElementById("projectTitle")
+  const showProjectsButton = document.getElementById("goBackToProjects");
   //Projecttext,livedemo and github links are the same order as these are made
 
   const projectDescriptionText = [
     "Car rental service",
     "Books online",
     "Web-based employee management system that allows employees to record their work hours, clock in and out, track break times using a 4-digit pin code, and view their calculated pay. The system is managed by an admin who can add new employees, set their pay rates, and make adjustments as needed.",
-    "Barber Shop"
+    "Barber Shop",
+    "A game made for GMTK 2021 in 48 hours",
   ];
 
-  const liveDemo = ["https://ntig-uppsala.github.io/ntbbiluthyrning/", "", "","https://ntig-uppsala.github.io/frisorsaxe/"];
+  const liveDemo = [
+    "https://ntig-uppsala.github.io/ntbbiluthyrning/",
+    "",
+    "",
+    "https://ntig-uppsala.github.io/frisorsaxe/",
+    "",
+  ];
 
   const gitHubLinks = [
     "https://github.com/NTIG-Uppsala/ntbbiluthyrning",
     "https://github.com/LeoAhlinder/LightNovelOnline",
     "https://github.com/LeoAhlinder/pincode",
-    "https://github.com/NTIG-Uppsala/frisorsaxe"
+    "https://github.com/NTIG-Uppsala/frisorsaxe",
+    "https://github.com/LeoAhlinder/GMTK-2021/tree/main",
   ];
 
-  const projects = [carRental, library, employee,barberShop];
-
+  const projects = [carRental, library, employee, barberShop, GMTK];
 
   for (const project of projects) {
-    if (projectPressed === 0){
-      if (project.classList.contains("selectedProject")){
-        project.classList.remove("selectedProject")
+    if (projectPressed === 0) {
+      if (project.classList.contains("selectedProject")) {
+        project.classList.remove("selectedProject");
+      } else {
+        project.style.display = "block";
+        showProjectsButton.style.display = "none";
       }
-      else{
-        project.style.display = "block"
-        showProjectsButton.style.display = "none"
-      }
-    }
-    else if (project === projectPressed) {
+    } else if (project === projectPressed) {
       project.classList.add("selectedProject");
-      showProjectsButton.style.display = "block"
-      projectTitle.innerText = "";
+      showProjectsButton.style.display = "block";
     } else {
       project.style.display = "none";
     }
@@ -58,7 +58,7 @@ function changeTheme() {
 
   const backgroundImage = document.getElementById("homePage");
 
-  const cssRoot = document.querySelector(':root')
+  const cssRoot = document.querySelector(":root");
 
   const element = document.querySelector("html");
   if (element.getAttribute("id") === "darkMode") {
@@ -67,34 +67,54 @@ function changeTheme() {
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
 
-    document.body.style.backgroundColor = "RGB(255, 220, 220)"
-    cssRoot.style.setProperty("--backgroundColor","rgb(255, 220, 220)")
-    backgroundImage.style.backgroundImage = "url('pictures/sunrisebackground.png')";
+    document.body.style.backgroundColor = "RGB(255, 242, 242)";
+    cssRoot.style.setProperty("--backgroundColor", "rgb(255, 242, 242)");
+    backgroundImage.style.backgroundImage =
+      "url('pictures/sunrisebackground.png')";
 
-    localStorage.setItem("colorTheme","lightMode")
-
+    localStorage.setItem("colorTheme", "lightMode");
   } else {
     element.removeAttribute("data-bs-theme");
     element.removeAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "dark");
     element.setAttribute("id", "darkMode");
 
-    document.body.style.backgroundColor = "RGB(43, 48, 53)"
-    cssRoot.style.setProperty("--backgroundColor","rgb(43, 48, 53)")
+    document.body.style.backgroundColor = "RGB(43, 48, 53)";
+    cssRoot.style.setProperty("--backgroundColor", "rgb(43, 48, 53)");
     backgroundImage.style.backgroundImage = "url('pictures/shootingstar.jpg')";
 
-    localStorage.setItem("colorTheme","darkMode")
+    localStorage.setItem("colorTheme", "darkMode");
   }
 }
 
-function checkColorTheme(){
-
+function checkColorTheme() {
   let colorTheme = localStorage.getItem("colorTheme");
 
-  colorTheme = (colorTheme !== "lightMode" && colorTheme !== "darkMode") ? "darkMode" : colorTheme;
+  colorTheme =
+    colorTheme !== "lightMode" && colorTheme !== "darkMode"
+      ? "darkMode"
+      : colorTheme;
 
-  if (colorTheme === "lightMode"){
-    changeTheme()
+  if (colorTheme === "lightMode") {
+    changeTheme();
   }
 }
 
+// var body = document.getElementById("wrapper");
+// var except = document.getElementById("selectedProject");
+
+// body.addEventListener(
+//   "click",
+//   function () {
+//     alert("wrapper");
+//   },
+//   false
+// );
+// except.addEventListener(
+//   "click",
+//   function (ev) {
+//     alert("except");
+//     ev.stopPropagation();
+//   },
+//   false
+// );
