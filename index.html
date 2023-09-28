@@ -115,7 +115,7 @@
   </div>
 
   <!-- Go back to projects arrow -->
-  <div class="ms-3 mt-3" class="projectsArrow">
+  <div class="ms-3 mt-3">
     <button id="goBackToProjects" class="bg-transparent border-0" onclick="selectedProject(0)">
       <img src="icons/arrow.png" alt="backArrow" id="backArrow">
     </button>
@@ -125,7 +125,7 @@
   <div id="projects">
     <div class="container pt-0 text-center">
       <div class="row">
-        <div class="col-xl-4 col-md-6 my-5">
+        <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
             <div class="card" id="carRental">
               <button class="projectButton" onclick="selectedProject(carRental)">
@@ -138,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 my-5">
+        <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
             <div class="card" id="library">
               <button class="projectButton" onclick="selectedProject(library)">
@@ -151,7 +151,10 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 my-5 ">
+      </div>
+      <div class="row">
+
+        <div class="col-xl-6 col-md-6 my-5 ">
           <div class="container d-flex justify-content-center">
             <div class="card" id="employee">
               <button class="projectButton" onclick="selectedProject(employee)">
@@ -164,13 +167,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div id="projects">
-    <div class="container pt-0 text-center">
-      <div class="row">
-        <div class="col-xl-4 col-md-6 my-5">
+        <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
             <div class="card" id="barberShop">
               <button class="projectButton" onclick="selectedProject(barberShop)">
@@ -183,24 +180,111 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 my-5 ">
-          <div class="container d-flex justify-content-center">
-            <div class="card" id="GMTK">
-              <button class="projectButton" onclick="selectedProject(GMTK)">
-                <img src="pictures/gamedev.webp" class="card-img-top" alt="Emplyoees">
-                <div class="card-body">
-                  <h5 class="card-title">Game for GMTK-2021</h5>
-                  <p class="card-text mb-2">Game development.</p>
-                </div>
-              </button>
+      </div>
+    </div>
+    <div id="projects">
+      <div class="container pt-0 text-center">
+        <div class="row">
+          <div class="col-xl-6 col-md-6 my-5 ">
+            <div class="container d-flex justify-content-center">
+              <div class="card" id="GMTK">
+                <button class="projectButton" onclick="selectedProject(GMTK)">
+                  <img src="pictures/gamedev.webp" class="card-img-top" alt="Emplyoees">
+                  <div class="card-body">
+                    <h5 class="card-title">Game for GMTK-2021</h5>
+                    <p class="card-text mb-2">Game development.</p>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container-fluid contactMe" style="background-color: red;">
+    <div class="container-fluid contactMe">
+      <div class="containerCV">
+        <div class="header">
+          <div class="full-name">
+            <span class="first-name">Leo</span>
+            <span class="last-name">Ahlinder</span>
+          </div>
+          <div class="contact-info">
+            <span class="email">Email: </span>
+            <span class="email-val">ahlinder.leo@icloud.com</span>
+            <span class="separator"></span>
+          </div>
+
+          <div class="about">
+            <span class="position">Full Stack Developer</span>
+            <span class="desc">
+              I am a highly motivated and result-focused full-stack developer, eager to join a dynamic, team-oriented
+              company that offers opportunities for professional growth and success.
+            </span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="section">
+            <div class="section__title">Experience</div>
+            <div class="section__list">
+              <div class="section__list-item">
+                <div class="left">
+                  <div class="name">KlowdBox</div>
+                  <div class="addr">San Fr, CA</div>
+                  <div class="duration">Jan 2011 - Feb 2015</div>
+                </div>
+                <div class="right">
+                  <div class="name">Fr developer</div>
+                  <div class="desc">did This and that</div>
+                </div>
+              </div>
+              <div class="section__list-item">
+                <div class="left">
+                  <div class="name">Akount</div>
+                  <div class="addr">San Monica, CA</div>
+                  <div class="duration">Jan 2011 - Feb 2015</div>
+                </div>
+                <div class="right">
+                  <div class="name">Fr developer</div>
+                  <div class="desc">did This and that</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="section">
+            <div class="section__title">Education</div>
+            <div class="section__list">
+              <div class="section__list-item">
+                <div class="left">
+                  <div class="name">Sample Institute of technology</div>
+                  <div class="addr">San Fr, CA</div>
+                  <div class="duration">Jan 2011 - Feb 2015</div>
+                </div>
+                <div class="right">
+                  <div class="name">Fr developer</div>
+                  <div class="desc">did This and that</div>
+                </div>
+              </div>
+              <div class="section__list-item">
+                <div class="left">
+                  <div class="name">Akount</div>
+                  <div class="addr">San Monica, CA</div>
+                  <div class="duration">Jan 2011 - Feb 2015</div>
+                </div>
+                <div class="right">
+                  <div class="name">Fr developer</div>
+                  <div class="desc">did This and that</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
 </body>

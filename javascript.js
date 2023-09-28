@@ -37,11 +37,13 @@ function selectedProject(projectPressed) {
     if (projectPressed === 0) {
       if (project.classList.contains("selectedProject")) {
         project.classList.remove("selectedProject");
+        console.log("remove");
       } else {
         project.style.display = "block";
         showProjectsButton.style.display = "none";
       }
     } else if (project === projectPressed) {
+      console.log("added");
       project.classList.add("selectedProject");
       showProjectsButton.style.display = "block";
     } else {
