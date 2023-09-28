@@ -1,57 +1,3 @@
-function selectedProject(projectPressed) {
-  const employee = document.getElementById("employee");
-  const library = document.getElementById("library");
-  const carRental = document.getElementById("carRental");
-  const barberShop = document.getElementById("barberShop");
-
-  const showProjectsButton = document.getElementById("goBackToProjects");
-  //Projecttext,livedemo and github links are the same order as these are made
-
-  const projectDescriptionText = [
-    "Car rental service",
-    "Books online",
-    "Web-based employee management system that allows employees to record their work hours, clock in and out, track break times using a 4-digit pin code, and view their calculated pay. The system is managed by an admin who can add new employees, set their pay rates, and make adjustments as needed.",
-    "Barber Shop",
-    "A game made for GMTK 2021 in 48 hours",
-  ];
-
-  const liveDemo = [
-    "https://ntig-uppsala.github.io/ntbbiluthyrning/",
-    "",
-    "",
-    "https://ntig-uppsala.github.io/frisorsaxe/",
-    "",
-  ];
-
-  const gitHubLinks = [
-    "https://github.com/NTIG-Uppsala/ntbbiluthyrning",
-    "https://github.com/LeoAhlinder/LightNovelOnline",
-    "https://github.com/LeoAhlinder/pincode",
-    "https://github.com/NTIG-Uppsala/frisorsaxe",
-    "https://github.com/LeoAhlinder/GMTK-2021/tree/main",
-  ];
-
-  const projects = [carRental, library, employee, barberShop, GMTK];
-
-  for (const project of projects) {
-    if (projectPressed === 0) {
-      if (project.classList.contains("selectedProject")) {
-        project.classList.remove("selectedProject");
-        console.log("remove");
-      } else {
-        project.style.display = "block";
-        showProjectsButton.style.display = "none";
-      }
-    } else if (project === projectPressed) {
-      console.log("added");
-      project.classList.add("selectedProject");
-      showProjectsButton.style.display = "block";
-    } else {
-      project.style.display = "none";
-    }
-  }
-}
-
 function changeTheme() {
   const sun = document.querySelector(".sun");
   const moon = document.querySelector(".moon");
@@ -69,8 +15,8 @@ function changeTheme() {
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
 
-    document.body.style.backgroundColor = "RGB(255, 242, 242)";
-    cssRoot.style.setProperty("--backgroundColor", "rgb(255, 242, 242)");
+    document.body.style.backgroundColor = "RGB(255, 220, 220)";
+    cssRoot.style.setProperty("--backgroundColor", "rgb(255, 220, 220)");
     backgroundImage.style.backgroundImage =
       "url('pictures/sunrisebackground.png')";
 

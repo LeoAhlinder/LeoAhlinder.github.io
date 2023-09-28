@@ -26,6 +26,10 @@ body {
 
 }
 
+a{
+  font-size: 1rem;
+}
+
 #homePage {
     transition: 0.65s ease-in-out !important;
     background-image: url('pictures/shootingstar.jpg');
@@ -45,6 +49,8 @@ body {
 
 .contactMe{
     margin-top: 5% !important;
+    color: black;
+
 }
 
 
@@ -387,93 +393,8 @@ a{
     }
   }
   
-  
-  .details {
-    line-height: 20px;
-    
-    .section {
-      margin-bottom: 40px;  
-    }
-    
-    .section:last-of-type {
-      margin-bottom: 0px;  
-    }
-    
-    .section__title {
-      letter-spacing: 2px;
-      color: #54AFE4;
-      font-weight: bold;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    
-    .section__list-item {
-      margin-bottom: 40px;
-    }
-    
-    .section__list-item:last-of-type {
-      margin-bottom: 0;
-    }
-    
-    .left ,
-    .right {
-      vertical-align: top;
-      display: inline-block;
-    }
-    
-    .left {
-      width: 60%;    
-    }
-    
-    .right {
-      text-align: right;
-      width: 39%;    
-    }
-    
-    .name {
-      font-weight: bold;
-    }
-    
-    a {
-      text-decoration: none;
-      color: #000;
-      font-style: italic;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-      color: #000;
-    }
-      
-    .skills__item {
-      margin-bottom: 10px;  
-    }
-    
-    .skills__item .right {
-      input {
-        display: none;
-      }
-      
-      label {
-        display: inline-block;  
-        width: 20px;
-        height: 20px;
-        background: #C3DEF3;
-        border-radius: 20px;
-        margin-right: 3px;
-      }
-      
-      input:checked + label {
-        background: #79A9CE;
-      }
-    }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+.company{
+  margin-bottom: 0;
+  color: rgb(62, 181, 221);
+}
