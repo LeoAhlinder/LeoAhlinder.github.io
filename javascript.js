@@ -57,14 +57,16 @@ function checkColorTheme() {
 }
 
 function navbarOpacity() {
-  const cssRoot = document.querySelector(":root");
+  const element = document.getElementById("scrollPast"); // "My Projects" text
 
+  const opacity =
+    (element.offsetTop + element.offsetHeight - window.scrollY) / 1000; // Get opacity based on how far to "My projects" header.
+
+  const cssRoot = document.querySelector(":root");
   const navbarColorRGBA =
     localStorage.getItem("colorTheme") === "darkMode"
       ? `RGBA(43, 48, 53,${backgroundOpacity})`
       : `RGBA(255, 220, 220,${backgroundOpacity})`;
-
-  backgroundOpacity = window.scrollY / 1250;
-
+  backgroundOpacity = 1 - opacity; // minus one to get it to fade in.
   cssRoot.style.setProperty("--backgroundColor", navbarColorRGBA);
 }

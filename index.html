@@ -52,8 +52,6 @@
           <a href="#me" class="nav-link fs-4 navItemStyle" aria-current="page">Me</a>
           <a href="#projects" class="nav-link fs-4 navItemStyle">Projects</a>
           <a href="#Resumé" class="nav-link fs-4 navItemStyle">My Resumé</a>
-          <a href="#" class="nav-link fs-4 navItemStyle">Contact Me</a>
-
         </div>
       </div>
     </div>
@@ -67,7 +65,10 @@
     </div>
     <div id="aboutMe" class="p-3">
       <h3 class=" mt-2 ms-2 Title" id="me">Me</h3>
-      <p class="ms-2" id="meDescription">Software developer studying at NTI gymnasiet.</p>
+      <p class="ms-2" id="meDescription">
+        I'm a software developer currently studying at NTI Gymnasiet. In my free time, I find enjoyment in both
+        programming and gaming.<br>
+        I have an open-minded attitude, am receptive to criticism, and have a strong passion for learning. </p>
       <h3 class="p-2 Title text-start">My Skills</h3>
       <div class="skills">
         <div class="programingLang">
@@ -124,8 +125,8 @@
 
   <!-- All projects -->
   <div id="projects">
-    <h3 class="text-center Title fs-1 mt-1">My Projects</h3>
-    <div class="container pt-0 text-center">
+    <h3 class="text-center Title fs-1 mt-1" id="scrollPast">My Projects</h3>
+    <div class="container pt-0 text-center allProjects">
       <div class="row">
         <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
@@ -190,107 +191,102 @@
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <div class="container pt-0 text-center">
-        <div class="row">
-          <div class="col-xl-6 col-md-6 my-5 ">
-            <div class="container d-flex justify-content-center">
-              <div class="card" id="GMTK">
-                <div class="projectButton">
-                  <img src="pictures/gamedev.webp" class="card-img-top" alt="Emplyoees">
-                  <div class="card-body">
-                    <h5 class="card-title">Game for GMTK-2021</h5>
-                    <p class="card-text mb-2">Game development.</p>
-                  </div>
-                  <a href="https://github.com/LeoAhlinder/GMTK-2021" target="_blank" class="githubLink">Github</a>
+      <div class="row">
+        <div class="col-xl-6 col-md-6 my-5 ">
+          <div class="container d-flex justify-content-center">
+            <div class="card" id="GMTK">
+              <div class="projectButton">
+                <img src="pictures/gamedev.webp" class="card-img-top" alt="Emplyoees">
+                <div class="card-body">
+                  <h5 class="card-title">Game for GMTK-2021</h5>
+                  <p class="card-text mb-2">Game development.</p>
                 </div>
+                <a href="https://github.com/LeoAhlinder/GMTK-2021" target="_blank" class="githubLink">Github</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <h3 class="text-center" id="workHeader">My work experince</h3>
-  <div class="container-fluid contactMe" id="Resumé">
-    <div class="containerCV">
-      <div class="header">
-        <div class="full-name">
-          <span class="first-name">Leo</span>
-          <span class="last-name">Ahlinder</span>
+
+    <!-- Resume -->
+    <h3 class="text-center" id="workHeader">My work experince</h3>
+    <div class="container-fluid resume" id="Resumé">
+      <div class="containerCV">
+        <div class="header">
+          <div class="full-name">
+            <span class="first-name">Leo</span>
+            <span class="last-name">Ahlinder</span>
+          </div>
+          <div class="contact-info">
+            <span class="email">Email: </span>
+            <span class="email-val">ahlinder.leo@icloud.com</span>
+            <span class="separator"></span>
+          </div>
+          <div class="about">
+            <span class="position">Full Stack Developer</span>
+            <br>
+            <span class="desc">
+              I am a highly motivated and result-focused full-stack developer, eager to join a dynamic, team-oriented
+              company that offers opportunities for professional growth and success.
+            </span>
+          </div>
         </div>
-        <div class="contact-info">
-          <span class="email">Email: </span>
-          <span class="email-val">ahlinder.leo@icloud.com</span>
-          <span class="separator"></span>
-        </div>
-        <div class="about">
-          <span class="position">Full Stack Developer</span>
+        <p class="resumeWorkPlace">
+          <span class="company">Uppsala&nbsp;Vatten</span>
           <br>
-          <span class="desc">
-            I am a highly motivated and result-focused full-stack developer, eager to join a dynamic, team-oriented
-            company that offers opportunities for professional growth and success.
+          <span>June 2023 - August 2023</span>
+          <span class="resumeWorkSummary">
+            Responsible for the recycling facilities
           </span>
+        </p>
+        <p class="resumeWorkPlace">
+          <span class="company">Bil&nbsp;demo</span>
+          <br>
+          <span>April 2023 - June 2023</span>
+          <span class="resumeWorkSummary">
+            I assisted customers, changed, and washed tires.
+          </span>
+        </p>
+        <p class="resumeWorkPlace">
+          <span class="company">Global&nbsp;kinetics</span>
+          <br>
+          <span>June 2022 - Juny 2022</span>
+          <span class="resumeWorkSummary">
+            Responsible for contact with customers and hospital.
+
+          </span>
+        </p>
+        <p class="resumeWorkPlace">
+          <span class="company">Castus</span>
+          <br>
+          <span>June 2020 - July 2023</span>
+          <span class="resumeWorkSummary">
+            Invoice scanning, mail handling, and reception.
+          </span>
+        </p>
+        <p class="resumeWorkPlace">
+          <span class="company">Uppsala&nbsp;kommun</span>
+          <br>
+          <span>June 2020 - July 2023</span>
+          <span class="resumeWorkSummary">
+            Cleaned a kindergarden.
+          </span>
+        </p>
+        <p class="resumeWorkPlace">
+          <span class="company">Amazing&nbsp;Thai</span>
+          <br>
+          <span>June 2020 - July 2020</span>
+          <span class="resumeWorkSummary">
+            Worked has a waiter.
+          </span>
+        </p>
+        <div class="text-center PDF">
+          <a href="Leo-Ahlinder.pdf" target="_blank">PDF</a>
         </div>
-      </div>
-      <p style="text-align:left;">
-        <span class="company">Uppsala Vatten</span>
-        <br>
-        <span>June 2023 - August 2023</span>
-        <span style="float:right;">
-          Responsible for the recycling facilities
-        </span>
-      </p>
-      <p style="text-align:left;">
-        <span class="company">Bil demo</span>
-        <br>
-        <span class="">April 2023 - June 2023</span>
-        <span style="float:right;">
-          I assisted customers, changed, and washed tires.
-        </span>
-      </p>
-      <p style="text-align:left;">
-        <span class="company">Global kinetics</span>
-        <br>
-        <span class="">June 2022 - Juny 2022</span>
-        <span style="float:right;">
-          Responsible for contact with customers and hospital.
-
-        </span>
-      </p>
-      <p style="text-align:left;">
-        <span class="company">Castus</span>
-        <br>
-        <span class="">June 2020 - July 2023</span>
-        <span style="float:right;">
-          Invoice scanning, mail handling, and reception.
-        </span>
-      </p>
-      <p style="text-align:left;">
-        <span class="company">Uppsala kommun</span>
-        <br>
-        <span class="">June 2020 - July 2023</span>
-        <span style="float:right;">
-          Cleaned a kindergarden.
-        </span>
-      </p>
-      <p style="text-align:left;">
-        <span class="company">Amazing Thai</span>
-        <br>
-        <span class="">June 2020 - July 2020</span>
-        <span style="float:right;">
-          Worked has a waiter.
-        </span>
-      </p>
-
-      <div class="text-center">
-        <a href="Leo-Ahlinder.pdf" target="_blank">PDF</a>
       </div>
     </div>
-  </div>
-
 </body>
 
 </html>

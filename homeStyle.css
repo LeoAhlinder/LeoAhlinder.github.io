@@ -47,11 +47,12 @@ a{
     margin-top: 20%;
 }   
 
-.contactMe{
-    margin-top: 1% !important;
+.resume{
+    margin-top: 2% !important;
     color: black;
 
 }
+
 
 .navItemStyle{
   font-family: navitem !important;
@@ -90,8 +91,36 @@ a{
     width: auto;
 }
 
+.allProjects{
+  border: 3px solid gray;
+  border-radius: 10px;
+}
+
+.resumeWorkPlace{
+  text-align: left;
+}
+
 #goBackToProjects:hover{
     opacity: 0.7;
+}
+
+.PDF{
+  margin: 0 auto; 
+  margin-top: 50px;
+}
+
+.resumeWorkSummary{
+  float: right;
+}
+
+@media screen and (max-width:500px) {
+  .resumeWorkPlace{
+    margin-top: 50px !important;
+  }
+  .resumeWorkSummary{
+    margin-bottom: 20px;
+    float: left;
+  }
 }
 
 .projectButton{
@@ -132,7 +161,7 @@ a{
 }
 .projectButton{
     border: none;
-    background-color: transparent;
+    background-color: transparent; 
     font-size: 2.5rem;
     margin-bottom: 4%;
 
@@ -163,6 +192,7 @@ html[data-bs-theme="light"] #meDescription {
 #workHeader{
   font-family: navitem;
   margin-bottom: 0px;
+  margin-top: 2%;
 }
 
 #aboutMe{
