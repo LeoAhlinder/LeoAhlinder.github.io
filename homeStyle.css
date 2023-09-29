@@ -1,5 +1,5 @@
 :root{
-    --backgroundColor:rgb(43, 48, 53);
+    --backgroundColor:rgba(43, 48, 53,0.2);
 }
 
 body {
@@ -18,12 +18,12 @@ body {
 
 #customNavBar{
     background-color:var(--backgroundColor) !important;
+    /* background-color: rgba(0, 0, 255, 0.028) !important; */
 }
 
 .scrollSpy{
     position: fixed !important;
     bottom: 77px;
-
 }
 
 a{
@@ -32,7 +32,7 @@ a{
 
 #homePage {
     transition: 0.65s ease-in-out !important;
-    background-image: url('pictures/shootingstar.jpg');
+    background-image: url('pictures/shootingstar.png');
     background-position: center;
     background-size: cover;
     color: white;
@@ -48,11 +48,18 @@ a{
 }   
 
 .contactMe{
-    margin-top: 5% !important;
+    margin-top: 1% !important;
     color: black;
 
 }
 
+.navItemStyle{
+  font-family: navitem !important;
+}
+@font-face {
+  font-family: navitem;
+  src: url("fonts/Montserrat-VariableFont_wght.ttf");
+}
 
 .selectedProject{
     transform: scale(1);
@@ -109,7 +116,15 @@ a{
     height: 10vh;
     width: 60% !important;
     margin: 0 auto;
+    font-family: Title;
+    text-shadow: 2px 3px 2px black;
 }
+
+@font-face {
+  font-family: Title;
+  src: url("fonts/Ubuntu-Bold.ttf");
+}
+
 @media screen and (max-width:800px) {
     #Title{
         font-size: 1.3rem;
@@ -131,6 +146,7 @@ a{
 
 .Title{
     margin-bottom: 3px;
+    font-family: Title;
 }
 
 html[data-bs-theme="light"] #meDescription {
@@ -140,15 +156,20 @@ html[data-bs-theme="light"] #meDescription {
 @media screen and (min-width:2000px) {
     #aboutMe{
         width: 50% !important;
-        height: 40% !important;
+        height: 35% !important;
     }
+}
+
+#workHeader{
+  font-family: navitem;
+  margin-bottom: 0px;
 }
 
 #aboutMe{
     margin: 0 auto;
     width: 45%;
     height: auto;
-    background-color: rgba(70, 78, 109, 0.394);
+    background-color: rgba(70, 78, 109, 0.603);
     box-shadow: 0px 5px 5px black;
 }
 
@@ -168,7 +189,7 @@ html[data-bs-theme="light"] #meDescription {
 
 @media screen and (max-width:450px) {
     #aboutMe{
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -348,7 +369,6 @@ a{
     box-shadow: 1px 1px 2px #DAD7D7;
     border-radius: 3px;  
     padding: 40px;
-    margin-top: 50px;
   }
   
   .header {
