@@ -1,5 +1,5 @@
 :root{
-    --backgroundColor:rgba(43, 48, 53,0.2);
+    --navbarColor:rgba(43, 48, 53,0.2);
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 }
 
 #customNavBar{
-    background-color:var(--backgroundColor) !important;
+    background-color:var(--navbarColor) !important;
     /* background-color: rgba(0, 0, 255, 0.028) !important; */
 }
 
@@ -92,7 +92,7 @@ a{
 }
 
 .allProjects{
-  border: 3px solid gray;
+  border: 2px solid gray;
   border-radius: 10px;
 }
 

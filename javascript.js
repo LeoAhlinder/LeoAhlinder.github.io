@@ -17,10 +17,10 @@ function changeTheme() {
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
 
-    document.body.style.backgroundColor = `RGB(255, 242, 246)`;
+    document.body.style.backgroundColor = `RGB(255, 248, 250)`;
     cssRoot.style.setProperty(
-      "--backgroundColor",
-      `rgba(255, 220, 220,${backgroundOpacity})`
+      "--navbarColor",
+      `rgba(255, 243, 240,${backgroundOpacity})`
     );
     backgroundImage.style.backgroundImage =
       "url('pictures/sunrisebackground.png')";
@@ -34,8 +34,8 @@ function changeTheme() {
 
     document.body.style.backgroundColor = `rgb(33, 37, 41)`;
     cssRoot.style.setProperty(
-      "--backgroundColor",
-      `rgba(43, 48, 53,${backgroundOpacity})`
+      "--navbarColor",
+      `rgba(255, 236, 245,${backgroundOpacity})`
     );
     backgroundImage.style.backgroundImage = "url('pictures/shootingstar.png')";
 
@@ -66,7 +66,7 @@ function navbarOpacity() {
   const navbarColorRGBA =
     localStorage.getItem("colorTheme") === "darkMode"
       ? `RGBA(43, 48, 53,${backgroundOpacity})`
-      : `RGBA(255, 220, 220,${backgroundOpacity})`;
-  backgroundOpacity = 1 - opacity; // minus one to get it to fade in.
-  cssRoot.style.setProperty("--backgroundColor", navbarColorRGBA);
+      : `RGBA(255, 236, 245,${backgroundOpacity})`;
+  backgroundOpacity = 1.1 - opacity; // minus one to get it to fade in.
+  cssRoot.style.setProperty("--navbarColor", navbarColorRGBA);
 }
