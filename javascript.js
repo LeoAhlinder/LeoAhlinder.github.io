@@ -1,3 +1,5 @@
+var backgroundOpacity = 0;
+
 function changeTheme() {
   const sun = document.querySelector(".sun");
   const moon = document.querySelector(".moon");
@@ -15,8 +17,11 @@ function changeTheme() {
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
 
-    document.body.style.backgroundColor = "RGB(255, 220, 220)";
-    cssRoot.style.setProperty("--backgroundColor", "rgb(255, 220, 220)");
+    document.body.style.backgroundColor = `RGB(255, 242, 246)`;
+    cssRoot.style.setProperty(
+      "--backgroundColor",
+      `rgba(255, 220, 220,${backgroundOpacity})`
+    );
     backgroundImage.style.backgroundImage =
       "url('pictures/sunrisebackground.png')";
 
@@ -27,9 +32,12 @@ function changeTheme() {
     element.setAttribute("data-bs-theme", "dark");
     element.setAttribute("id", "darkMode");
 
-    document.body.style.backgroundColor = "RGB(43, 48, 53)";
-    cssRoot.style.setProperty("--backgroundColor", "rgb(43, 48, 53)");
-    backgroundImage.style.backgroundImage = "url('pictures/shootingstar.jpg')";
+    document.body.style.backgroundColor = `rgb(33, 37, 41)`;
+    cssRoot.style.setProperty(
+      "--backgroundColor",
+      `rgba(43, 48, 53,${backgroundOpacity})`
+    );
+    backgroundImage.style.backgroundImage = "url('pictures/shootingstar.png')";
 
     localStorage.setItem("colorTheme", "darkMode");
   }
@@ -48,21 +56,15 @@ function checkColorTheme() {
   }
 }
 
-// var body = document.getElementById("wrapper");
-// var except = document.getElementById("selectedProject");
+function navbarOpacity() {
+  const cssRoot = document.querySelector(":root");
 
-// body.addEventListener(
-//   "click",
-//   function () {
-//     alert("wrapper");
-//   },
-//   false
-// );
-// except.addEventListener(
-//   "click",
-//   function (ev) {
-//     alert("except");
-//     ev.stopPropagation();
-//   },
-//   false
-// );
+  const navbarColorRGBA =
+    localStorage.getItem("colorTheme") === "darkMode"
+      ? `RGBA(43, 48, 53,${backgroundOpacity})`
+      : `RGBA(255, 220, 220,${backgroundOpacity})`;
+
+  backgroundOpacity = window.scrollY / 1250;
+
+  cssRoot.style.setProperty("--backgroundColor", navbarColorRGBA);
+}

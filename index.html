@@ -25,7 +25,7 @@
   <title>Leos Portfolio</title>
 </head>
 
-<body onload="checkColorTheme()">
+<body onload="checkColorTheme()" onscroll="navbarOpacity()">
 
   <!-- AOS library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -48,10 +48,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse align-items-center" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a href="#me" class="nav-link fs-4" aria-current="page">Me</a>
-          <a href="#projects" class="nav-link fs-4">Projects</a>
-          <a href="#" class="nav-link fs-4">Contact Me</a>
+        <div class="navbar-nav customNavBar">
+          <a href="#me" class="nav-link fs-4 navItemStyle" aria-current="page">Me</a>
+          <a href="#projects" class="nav-link fs-4 navItemStyle">Projects</a>
+          <a href="#Resumé" class="nav-link fs-4 navItemStyle">My Resumé</a>
+          <a href="#" class="nav-link fs-4 navItemStyle">Contact Me</a>
 
         </div>
       </div>
@@ -116,91 +117,94 @@
 
   <!-- Go back to projects arrow -->
   <div class="ms-3 mt-3">
-    <button id="goBackToProjects" class="bg-transparent border-0" onclick="selectedProject(0)">
+    <button id="goBackToProjects" class="bg-transparent border-0">
       <img src="icons/arrow.png" alt="backArrow" id="backArrow">
     </button>
   </div>
 
   <!-- All projects -->
   <div id="projects">
+    <h3 class="text-center Title fs-1 mt-1">My Projects</h3>
     <div class="container pt-0 text-center">
       <div class="row">
         <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
             <div class="card" id="carRental">
-              <button class="projectButton" onclick="selectedProject(carRental)">
+              <div class="projectButton">
                 <img src="pictures/carRentalPic.webp" class="card-img-top" alt="carRental">
                 <div class="card-body">
                   <h5 class="card-title">Car rental website</h5>
                   <p class="card-text mb-2">Frontend programming and web-design project.</p>
                 </div>
                 <a href="https://github.com/NTIG-Uppsala/ntbbiluthyrning" target="_blank" class="githubLink">Github</a>
-              </button>
+                <a href="https://ntig-uppsala.github.io/ntbbiluthyrning/" target="_blank" class="githubLink">
+                  Live demo</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
             <div class="card" id="library">
-              <button class="projectButton" onclick="selectedProject(library)">
+              <div class="projectButton">
                 <img src="pictures/librarypic.webp" class="card-img-top" alt="Library">
                 <div class="card-body">
                   <h5 class="card-title">A Online Library</h5>
                   <p class="card-text mb-2">Full Stack and web-design project.</p>
                 </div>
                 <a href="https://github.com/LeoAhlinder/LightNovelOnline" target="_blank" class="githubLink">Github</a>
-              </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-
         <div class="col-xl-6 col-md-6 my-5 ">
           <div class="container d-flex justify-content-center">
             <div class="card" id="employee">
-              <button class="projectButton" onclick="selectedProject(employee)">
+              <div class="projectButton">
                 <img src="pictures/emplyoeepic.webp" class="card-img-top" alt="Emplyoees">
                 <div class="card-body">
                   <h5 class="card-title">Emplyoee pay and work tracker</h5>
                   <p class="card-text mb-2">Full Stack project.</p>
                 </div>
                 <a href="https://github.com/LeoAhlinder/pincode" target="_blank" class="githubLink">Github</a>
-              </button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-xl-6 col-md-6 my-5">
           <div class="container d-flex justify-content-center">
             <div class="card" id="barberShop">
-              <button class="projectButton" onclick="selectedProject(barberShop)">
+              <div class="projectButton">
                 <img src="pictures/barbershop.webp" class="card-img-top" alt="barbershop">
                 <div class="card-body">
                   <h5 class="card-title">Frisör Saxé</h5>
                   <p class="card-text mb-2">Frontend programming and web-design project.</p>
                 </div>
                 <a href="https://github.com/NTIG-Uppsala/frisorsaxe" target="_blank" class="githubLink">Github</a>
+                <a href="https://ntig-uppsala.github.io/frisorsaxe/" target="_blank" class="githubLink">Live demo</a>
 
-              </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="projects">
+    <div>
       <div class="container pt-0 text-center">
         <div class="row">
           <div class="col-xl-6 col-md-6 my-5 ">
             <div class="container d-flex justify-content-center">
               <div class="card" id="GMTK">
-                <button class="projectButton" onclick="selectedProject(GMTK)">
+                <div class="projectButton">
                   <img src="pictures/gamedev.webp" class="card-img-top" alt="Emplyoees">
                   <div class="card-body">
                     <h5 class="card-title">Game for GMTK-2021</h5>
                     <p class="card-text mb-2">Game development.</p>
                   </div>
                   <a href="https://github.com/LeoAhlinder/GMTK-2021" target="_blank" class="githubLink">Github</a>
-                </button>
+                </div>
               </div>
             </div>
           </div>
@@ -209,87 +213,83 @@
     </div>
   </div>
 
-    <div class="container-fluid contactMe">
-      <div class="containerCV">
-        <div class="header">
-          <div class="full-name">
-            <span class="first-name">Leo</span>
-            <span class="last-name">Ahlinder</span>
-          </div>
-          <div class="contact-info">
-            <span class="email">Email: </span>
-            <span class="email-val">ahlinder.leo@icloud.com</span>
-            <span class="separator"></span>
-          </div>
-          
-
-          <div class="about">
-            <span class="position">Full Stack Developer</span>
-            <br>
-            <span class="desc">
-              I am a highly motivated and result-focused full-stack developer, eager to join a dynamic, team-oriented
-              company that offers opportunities for professional growth and success.
-            </span>
-          </div>
+  <h3 class="text-center" id="workHeader">My work experince</h3>
+  <div class="container-fluid contactMe" id="Resumé">
+    <div class="containerCV">
+      <div class="header">
+        <div class="full-name">
+          <span class="first-name">Leo</span>
+          <span class="last-name">Ahlinder</span>
         </div>
-
-        <p style="text-align:left;">
-          <span class="company">Uppsala Vatten</span>
-          <br>
-          <span>June 2023 - August 2023</span>
-          <span style="float:right;">
-            Responsible for the recycling facilities
-          </span>
-        </p>
-        <p style="text-align:left;">
-          <span class="company">Bil demo</span>
-          <br>
-          <span class="">April 2023 - June 2023</span>
-          <span style="float:right;">
-            I assisted customers, changed, and washed tires.
-          </span>
-        </p>
-        <p style="text-align:left;">
-          <span class="company">Global kinetics</span>
-          <br>
-          <span class="">June 2022 - Juny 2022</span>
-          <span style="float:right;">
-            Responsible for contact with customers and hospital.
-
-          </span>
-        </p>
-        <p style="text-align:left;">
-          <span class="company">Castus</span>
-          <br>
-          <span class="">June 2020 - July 2023</span>
-          <span style="float:right;">
-            Invoice scanning, mail handling, and reception.
-          </span>
-        </p>
-        <p style="text-align:left;">
-          <span class="company">Uppsala kommun</span>
-          <br>
-          <span class="">June 2020 - July 2023</span>
-          <span style="float:right;">
-            Cleaned a kindergarden.
-          </span>
-        </p>
-        <p style="text-align:left;">
-          <span class="company">Amazing Thai</span>
-          <br>
-          <span class="">June 2020 - July 2020</span>
-          <span style="float:right;">
-            Work has a waiter.
-          </span>
-        </p>
-       
-        <div class="text-center">
-          <a>PDF</a>
+        <div class="contact-info">
+          <span class="email">Email: </span>
+          <span class="email-val">ahlinder.leo@icloud.com</span>
+          <span class="separator"></span>
         </div>
-
+        <div class="about">
+          <span class="position">Full Stack Developer</span>
+          <br>
+          <span class="desc">
+            I am a highly motivated and result-focused full-stack developer, eager to join a dynamic, team-oriented
+            company that offers opportunities for professional growth and success.
+          </span>
         </div>
       </div>
+      <p style="text-align:left;">
+        <span class="company">Uppsala Vatten</span>
+        <br>
+        <span>June 2023 - August 2023</span>
+        <span style="float:right;">
+          Responsible for the recycling facilities
+        </span>
+      </p>
+      <p style="text-align:left;">
+        <span class="company">Bil demo</span>
+        <br>
+        <span class="">April 2023 - June 2023</span>
+        <span style="float:right;">
+          I assisted customers, changed, and washed tires.
+        </span>
+      </p>
+      <p style="text-align:left;">
+        <span class="company">Global kinetics</span>
+        <br>
+        <span class="">June 2022 - Juny 2022</span>
+        <span style="float:right;">
+          Responsible for contact with customers and hospital.
+
+        </span>
+      </p>
+      <p style="text-align:left;">
+        <span class="company">Castus</span>
+        <br>
+        <span class="">June 2020 - July 2023</span>
+        <span style="float:right;">
+          Invoice scanning, mail handling, and reception.
+        </span>
+      </p>
+      <p style="text-align:left;">
+        <span class="company">Uppsala kommun</span>
+        <br>
+        <span class="">June 2020 - July 2023</span>
+        <span style="float:right;">
+          Cleaned a kindergarden.
+        </span>
+      </p>
+      <p style="text-align:left;">
+        <span class="company">Amazing Thai</span>
+        <br>
+        <span class="">June 2020 - July 2020</span>
+        <span style="float:right;">
+          Worked has a waiter.
+        </span>
+      </p>
+
+      <div class="text-center">
+        <a href="Leo-Ahlinder.pdf" target="_blank">PDF</a>
+      </div>
     </div>
+  </div>
 
 </body>
 
