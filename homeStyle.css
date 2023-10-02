@@ -211,7 +211,7 @@ html[data-bs-theme="light"] #meDescription {
 
 @media screen and (max-width:998px) {
     #aboutMe{
-        width: 45%;
+        width: 65%;
     }
     #meDescription{
         font-size: 1.2rem !important;
@@ -223,9 +223,15 @@ html[data-bs-theme="light"] #meDescription {
 }
 
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:475px) {
     #aboutMe{
         width: 90%;
+    }
+    #meDescription{
+      font-size: 0.6rem !important;
+    }
+    .Title{
+      font-size: 1rem !important;
     }
 }
 
