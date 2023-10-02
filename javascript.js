@@ -67,7 +67,8 @@ function navbarOpacity() {
     localStorage.getItem("colorTheme") === "darkMode"
       ? `RGBA(43, 48, 53,${backgroundOpacity})`
       : `RGBA(255, 236, 245,${backgroundOpacity})`;
-  backgroundOpacity = 1.1 - opacity; // minus one to get it to fade in.
+  backgroundOpacity = 0.906 - opacity; // minus one to get it to fade in.
+  console.log(backgroundOpacity)
   cssRoot.style.setProperty("--navbarColor", navbarColorRGBA);
 }
 
