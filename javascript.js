@@ -35,7 +35,7 @@ function changeTheme() {
     document.body.style.backgroundColor = `rgb(33, 37, 41)`;
     cssRoot.style.setProperty(
       "--navbarColor",
-      `rgba(255, 236, 245,${backgroundOpacity})`
+      `rgba(43, 48, 53,${backgroundOpacity})`
     );
     backgroundImage.style.backgroundImage = "url('pictures/shootingstar.png')";
 
@@ -69,4 +69,9 @@ function navbarOpacity() {
       : `RGBA(255, 236, 245,${backgroundOpacity})`;
   backgroundOpacity = 1.1 - opacity; // minus one to get it to fade in.
   cssRoot.style.setProperty("--navbarColor", navbarColorRGBA);
+}
+
+function preloadImage(){
+  let img = new Image()
+  img.src = "pictures/sunrisebackground.png"
 }
