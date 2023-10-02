@@ -8,7 +8,6 @@ body {
 
 .navItems{
   justify-content: center;
-  left: 5px;
 }
 
 .nav-link{
@@ -24,7 +23,6 @@ body {
 
 #customNavBar{
     background-color:var(--navbarColor) !important;
-    /* background-color: rgba(0, 0, 255, 0.028) !important; */
 }
 
 .scrollSpy{
@@ -261,17 +259,25 @@ a{
     cursor: pointer;
 }
 
+@media screen and (max-width:991px) {
+  #colorModeContainer{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+  }
+}
+
 #colorModeContainer {
+  position: absolute;
     width: 46px;
     height: 46px;
     box-sizing: border-box;
     padding: 12px;
     background: none;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    top: 0;
+    left: 0;
   }
   
   .sun {
