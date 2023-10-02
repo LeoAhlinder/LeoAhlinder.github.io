@@ -68,7 +68,6 @@ function navbarOpacity() {
       ? `RGBA(43, 48, 53,${backgroundOpacity})`
       : `RGBA(255, 236, 245,${backgroundOpacity})`;
   backgroundOpacity = 0.906 - opacity; // minus one to get it to fade in.
-  console.log(backgroundOpacity)
   cssRoot.style.setProperty("--navbarColor", navbarColorRGBA);
 }
 

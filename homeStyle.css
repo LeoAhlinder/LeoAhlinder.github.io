@@ -48,9 +48,8 @@ a{
 }   
 
 .resume{
-    margin-top: 2% !important;
+    margin-top: 1% !important;
     color: black;
-
 }
 
 
@@ -198,7 +197,13 @@ html[data-bs-theme="light"] #meDescription {
 #workHeader{
   font-family: navitem;
   margin-bottom: 0px;
-  margin-top: 2%;
+  margin-top: 4%;
+}
+
+@media screen and (max-width:900px) {
+  #workHeader{
+    margin-top:10% ;
+  }
 }
 
 #aboutMe{
