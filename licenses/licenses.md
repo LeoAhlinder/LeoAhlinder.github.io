@@ -11,7 +11,7 @@ Game dev: https://unsplash.com/photos/XC3fq-ffXRI
 ## Background image
 
 Shootingstar night: https://wallpaperscraft.com/download/silhouette_starry_sky_shooting_star_131373/1920x1080 </br>
-Shootingstar morning: Same as night but photoshopped
+Shootingstar morning: Same as shootingstar night but photoshopped
 
 ## Icons
 
