@@ -149,6 +149,12 @@ a{
     text-shadow: 2px 3px 2px black;
 }
 
+@media screen and (max-width:330px) {
+  #Title{
+    display: none;
+  }
+}
+
 @font-face {
   font-family: Title;
   src: url("fonts/Ubuntu-Bold.ttf");
@@ -208,7 +214,7 @@ html[data-bs-theme="light"] #meDescription {
         width: 45%;
     }
     #meDescription{
-        font-size: 0.8rem !important;
+        font-size: 1.2rem !important;
     }
     .subTitle{
         font-size: 1rem !important;
