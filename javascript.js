@@ -43,19 +43,6 @@ function changeTheme() {
   }
 }
 
-function checkColorTheme() {
-  let colorTheme = localStorage.getItem("colorTheme");
-
-  colorTheme =
-    colorTheme !== "lightMode" && colorTheme !== "darkMode"
-      ? "darkMode"
-      : colorTheme;
-
-  if (colorTheme === "lightMode") {
-    changeTheme();
-  }
-}
-
 function navbarOpacity() {
   const element = document.getElementById("scrollPast"); // "My Projects" text
 
