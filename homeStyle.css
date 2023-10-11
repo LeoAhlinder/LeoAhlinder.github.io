@@ -95,10 +95,6 @@ a{
     width: auto;
 }
 
-.allProjects{
-  border: 2px solid gray;
-  border-radius: 10px;
-}
 
 .resumeWorkPlace{
   text-align: left;
@@ -137,6 +133,14 @@ a{
 
 .card-text{
     font-size: 50%;
+}
+
+.card{
+  height: 440px !important;
+}
+
+@media screen {
+  
 }
 
 .card-body{
@@ -271,6 +275,10 @@ a{
 @media screen and (max-width:1200px) {
   .card-text{
     font-size: 0.7rem;
+  }
+  .card{
+    width: 70%;
+    height: auto !important;
   }
 }
 
