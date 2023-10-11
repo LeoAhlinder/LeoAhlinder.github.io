@@ -1,4 +1,5 @@
 var backgroundOpacity = 0;
+var darkMode = true
 
 function changeTheme() {
   const sun = document.querySelector(".sun");
@@ -25,7 +26,7 @@ function changeTheme() {
     backgroundImage.style.backgroundImage =
       "url('pictures/sunrisebackground.png')";
 
-    localStorage.setItem("colorTheme", "lightMode");
+    darkMode = false
   } else {
     element.removeAttribute("data-bs-theme");
     element.removeAttribute("id", "lightMode");
@@ -39,7 +40,7 @@ function changeTheme() {
     );
     backgroundImage.style.backgroundImage = "url('pictures/shootingstar.png')";
 
-    localStorage.setItem("colorTheme", "darkMode");
+    darkMode = true
   }
 }
 
@@ -53,7 +54,7 @@ function navbarOpacity() {
 
   const cssRoot = document.querySelector(":root");
   const navbarColorRGBA =
-    localStorage.getItem("colorTheme") === "darkMode"
+    darkMode === true
       ? `RGBA(43, 48, 53,${backgroundOpacity})`
       : `RGBA(255, 236, 245,${backgroundOpacity})`;
 
