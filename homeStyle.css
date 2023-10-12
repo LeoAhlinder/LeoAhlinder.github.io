@@ -194,13 +194,21 @@ a{
 
 html[data-bs-theme="light"] #meDescription {
     text-shadow: 2px 2px 2px black;
-}
+} 
 
 @media screen and (min-width:2000px) {
     #aboutMe{
         width: 50% !important;
         height: 35% !important;
     }
+}
+
+.PDFDownload{
+  color: black;
+  text-decoration: none;
+  background-color: rgb(180, 178, 178);
+  padding: 1%;
+  border-radius: 5px;
 }
 
 #workHeader{
