@@ -208,6 +208,8 @@ html[data-bs-theme="light"] #meDescription {
   text-decoration: none;
   background-color: rgb(180, 178, 178);
   padding: 1%;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 5px;
 }
 
