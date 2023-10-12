@@ -9,6 +9,8 @@ function changeTheme() {
 
   const backgroundImage = document.getElementById("homePage");
 
+  const resume = document.getElementsByClassName("containerCV")[0];
+
   const cssRoot = document.querySelector(":root");
 
   const element = document.querySelector("html");
@@ -18,7 +20,10 @@ function changeTheme() {
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
 
-    document.body.style.backgroundColor = `RGB(255, 248, 250)`;
+    resume.style.backgroundColor = "rgb(79,76,72)"
+    resume.style.color = "white"
+
+    document.body.style.backgroundColor = `RGB(255, 224, 229)`;
     cssRoot.style.setProperty(
       "--navbarColor",
       `rgba(255, 243, 240,${backgroundOpacity})`
@@ -32,6 +37,9 @@ function changeTheme() {
     element.removeAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "dark");
     element.setAttribute("id", "darkMode");
+
+    resume.style.backgroundColor = "white"
+    resume.style.color = "black"
 
     document.body.style.backgroundColor = `rgb(33, 37, 41)`;
     cssRoot.style.setProperty(
