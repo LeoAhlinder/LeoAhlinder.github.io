@@ -289,7 +289,7 @@ a{
 
 @media screen and (max-width:1200px) {
   .card-text{
-    font-size: 0.7rem;
+    font-size: 1.1rem;
   }
   .card{
     width: 70%;
