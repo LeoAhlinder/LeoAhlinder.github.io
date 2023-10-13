@@ -23,7 +23,7 @@ function changeTheme() {
     resume.style.backgroundColor = "rgb(79,76,72)"
     resume.style.color = "white"
 
-    document.body.style.backgroundColor = `RGB(255, 224, 229)`;
+    document.body.style.backgroundColor = `RGB(255, 245, 248)`;
     cssRoot.style.setProperty(
       "--navbarColor",
       `rgba(255, 243, 240,${backgroundOpacity})`
