@@ -58,15 +58,13 @@ function navbarOpacity() {
   const opacity =
     (element.offsetTop + element.offsetHeight - window.scrollY) / 1000; // Get opacity based on how far to "My projects" header.
 
-  console.log(0.056 - opacity)
-  backgroundOpacity = 0.056 - opacity; // minus one to get it to fade in.
+  backgroundOpacity = 0.056 - opacity;
 
   const cssRoot = document.querySelector(":root");
   const navbarColorRGBA =
     darkMode === true
       ? `RGBA(43, 48, 53,${backgroundOpacity})`
       : `RGBA(255, 236, 245,${backgroundOpacity})`;
-  // console.log(backgroundOpacity)
 
   cssRoot.style.setProperty("--navbarColor", navbarColorRGBA);
 }
