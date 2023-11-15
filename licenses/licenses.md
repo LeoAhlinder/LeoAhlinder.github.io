@@ -6,7 +6,8 @@ Car rental: https://unsplash.com/photos/aZKJEvydrNM </br>
 Library: https://unsplash.com/photos/sfL_QOnmy00 </br>
 Employees: https://unsplash.com/photos/hCb3lIB8L8E </br>
 Barber Shop : https://unsplash.com/photos/fANekVYgCB0' </br>
-Game dev: https://unsplash.com/photos/XC3fq-ffXRI
+Game dev: https://unsplash.com/photos/XC3fq-ffXRI <br>
+Admin attendance: https://unsplash.com/photos/person-using-laptop-on-white-wooden-table-iusJ25iYu1c 
 
 ## Background image
 
