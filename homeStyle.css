@@ -135,8 +135,13 @@ a{
     font-size: 50%;
 }
 
+.cardImage{
+  max-height: 210px;
+}
+
 .card{
   height: 440px !important;
+  box-shadow: 0px 5px 5px black;
 }
 
 @media screen {
