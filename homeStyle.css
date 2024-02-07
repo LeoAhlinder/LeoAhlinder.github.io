@@ -1,5 +1,6 @@
 :root{
     --navbarColor:rgba(43, 48, 53, 0);
+    --cardImageColor:black;
 }
 
 body {
@@ -141,7 +142,7 @@ a{
 
 .card{
   height: 440px !important;
-  box-shadow: 0px 5px 5px black;
+  box-shadow: 0px 5px 5px var(--cardImageColor);
 }
 
 @media screen {
@@ -358,7 +359,7 @@ a{
     height: 50%;
     pointer-events: none;
     position: absolute;
-    left: 12.5%;
+    left: 16.5%;
     top: 18.75%;
     background-color: var(--lightModeBackground) !important;
     border-radius: 50%;

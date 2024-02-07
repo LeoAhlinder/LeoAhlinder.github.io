@@ -20,8 +20,10 @@ function changeTheme() {
     element.setAttribute("id", "lightMode");
     element.setAttribute("data-bs-theme", "light");
 
-    resume.style.backgroundColor = "rgb(79,76,72)"
+    resume.style.backgroundColor = "rgb(66,66,66)"
     resume.style.color = "white"
+
+    cssRoot.style.setProperty("--cardImageColor", `gray`);
 
     document.body.style.backgroundColor = `RGB(255, 245, 248)`;
     cssRoot.style.setProperty(
@@ -40,6 +42,8 @@ function changeTheme() {
 
     resume.style.backgroundColor = "white"
     resume.style.color = "black"
+
+    cssRoot.style.setProperty("--cardImageColor", `black`);
 
     document.body.style.backgroundColor = `rgb(33, 37, 41)`;
     cssRoot.style.setProperty(
